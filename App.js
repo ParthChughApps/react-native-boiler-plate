@@ -1,3 +1,9 @@
+/* https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow strict-local
+ */
+
 import React from 'react';
 import {Platform, Text} from 'react-native';
 import {Provider} from 'react-redux';
@@ -7,7 +13,7 @@ import AppWithNavigationState from './src/containers/AppNavigator';
 
 if (Platform.OS === 'android') {
   const oldRender = Text.render;
-  Text.render = function(...args) {
+  Text.render = function (...args) {
     const origin = oldRender.call(this, ...args);
     return React.cloneElement(origin, {
       style: [{fontFamily: 'Roboto'}, origin.props.style],
