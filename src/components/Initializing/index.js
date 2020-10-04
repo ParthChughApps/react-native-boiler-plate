@@ -1,25 +1,19 @@
 import React, {useEffect} from 'react';
 import {View, Image} from 'react-native';
 import PropTypes from 'prop-types';
-import {NavigationActions, StackActions} from 'react-navigation';
 import Osheen from './osheen.jpeg';
 import {connect} from 'react-redux';
 import styles from './styles';
 
-const Initialising = props => {
+const Initialising = (props) => {
   Initialising.propTypes = {
     navigation: PropTypes.object.isRequired,
   };
   const {navigation} = props;
 
   useEffect(() => {
-    const resetAction = StackActions.reset({
-      index: 0,
-      key: null,
-      actions: [NavigationActions.navigate({routeName: 'Home'})],
-    });
     setTimeout(() => {
-      navigation.dispatch(resetAction);
+      navigation.replace('Home');
     }, 2000);
   }, [navigation]);
 
@@ -41,7 +35,4 @@ const mapDispatchToProps = () => {
   return {};
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(Initialising);
+export default connect(mapStateToProps, mapDispatchToProps)(Initialising);

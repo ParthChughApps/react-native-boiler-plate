@@ -1,59 +1,48 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  View,
-  Text,
-  TouchableOpacity,
-} from 'react-native';
-import * as LoginActionCreators from '../../actions/LoginActions';
-import {bindActionCreators} from 'redux';
+import {View} from 'react-native';
+import YouTubePlayer from 'react-native-youtube-sdk';
 import {connect} from 'react-redux';
-import {Card, CardItem} from 'native-base';
 import styles from './styles';
 
-const Home = props => {
+const Home = (props) => {
   Home.propTypes = {
     navigation: PropTypes.object.isRequired,
   };
-  const {
-    navigation: {navigate},
-  } = props;
 
+  // const {
+  //   navigation: {
+  //     state: {
+  //       params: {videoId},
+  //     },
+  //   },
+  // } = props;
+  // let youTubePlayer = useRef();
   return (
-    <View styles={styles.container}>
-      <View style={styles.container}>
-      <TouchableOpacity  
-        
-        onPress={() => {
-          navigate('SingleVideo', {
-            topBar: 'Matlab Boy' 
-          });
-        }}>
-          <Card style={styles.cardStyle}>
-            <CardItem style={styles.cardItemBody}>
-                <View>
-                  <Text>Start Video/ Navigate to next screen</Text>
-                </View>
-            </CardItem>
-          </Card>
-        </TouchableOpacity>
-      </View>
+    <View style={styles.videoContentContainer}>
+      <YouTubePlayer
+        videoId={'08VxVqSt3WQ'}
+        autoPlay={true}
+        fullscreen={false}
+        showFullScreenButton={true}
+        showSeekBar={true}
+        showPlayPauseButton={true}
+        startTime={0}
+        style={styles.youtubePlayer}
+        onError={(e) => console.log(e)}
+        onChangeState={(e) => console.log(e)}
+        onChangeFullscreen={(e) => console.log(e)}
+      />
     </View>
   );
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {};
 };
 
-const mapDispatchToProps = dispatch => {
-  return {
-    LoginActions: bindActionCreators(LoginActionCreators, dispatch),
-  };
+const mapDispatchToProps = (dispatch) => {
+  return {};
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(Home);
-
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

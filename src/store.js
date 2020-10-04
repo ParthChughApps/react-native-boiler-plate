@@ -1,17 +1,17 @@
 import {applyMiddleware, createStore, compose} from 'redux';
 import thunk from 'redux-thunk';
 import {fromJS} from 'immutable';
-import {createReactNavigationReduxMiddleware} from 'react-navigation-redux-helpers';
+// import {createReactNavigationReduxMiddleware} from 'react-navigation-redux-helpers';
 import {persistStore, persistReducer} from 'redux-persist';
 import FilesystemStorage from 'redux-persist-filesystem-storage';
 import immutableTransform from 'redux-persist-transform-immutable';
 import {rootReducer} from './reducers';
 
-const appNavigatorMiddleware = createReactNavigationReduxMiddleware(
-  state => state.nav,
-);
+// const appNavigatorMiddleware = createReactNavigationReduxMiddleware(
+//   state => state.nav,
+// );
 
-const middlewares = [thunk, appNavigatorMiddleware];
+const middlewares = [thunk];
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 function isPlainEnoughObject(o) {
@@ -24,7 +24,7 @@ function customAutoMergeLevel2(inboundState, originalState, reducedState) {
   const newState = {...reducedState};
   // only rehydrate if inboundState exists and is an object
   if (inboundState && typeof inboundState === 'object') {
-    Object.keys(inboundState).forEach(key => {
+    Object.keys(inboundState).forEach((key) => {
       // ignore _persist data
       if (key === '_persist') {
         return;
