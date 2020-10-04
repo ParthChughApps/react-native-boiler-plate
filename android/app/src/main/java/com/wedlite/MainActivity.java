@@ -1,4 +1,4 @@
-package com.osheen;
+package com.wedlite;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "osheen";
+    return "Wedlite";
   }
 }

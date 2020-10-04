@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "277270092834",
+    "firebase_url": "https://wedlite-3ffed.firebaseio.com",
+    "project_id": "wedlite-3ffed",
+    "storage_bucket": "wedlite-3ffed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:277270092834:android:7b2174433d09e268c3be7b",
+        "android_client_info": {
+          "package_name": "com.wedlite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "277270092834-ithlvrtus8iaa98u07l0fi93vpl4epu2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSkra3OD_gfdWqR9rJWx64rbMekjHjikk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "277270092834-ithlvrtus8iaa98u07l0fi93vpl4epu2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
