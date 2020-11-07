@@ -3,7 +3,7 @@ import {View, StatusBar, SafeAreaView} from 'react-native';
 
 const Layout = props => {
   return (
-    <SafeAreaView style={[{flex: 1, backgroundColor: 'rgb(29,13,8)'}, props.style]}>
+    <SafeAreaView style={[{flex: 1}, props.style]}>
       <StatusBar backgroundColor="rgba(29,13,8)" barStyle="light-content" />
       {props.children}
     </SafeAreaView>
