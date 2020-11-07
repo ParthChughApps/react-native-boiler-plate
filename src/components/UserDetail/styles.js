@@ -3,14 +3,14 @@ import {Dimensions} from 'react-native';
 export default {
   container: {
     flex: 1,
-    
+    backgroundColor: 'white',
     alignItems: 'center',
   },
   appLogoCenter: {
     alignSelf: 'center',
-    marginVertical: -100,
+    marginTop: 100,
+    marginBottom: 60,
     width: '100%',
-
   },
   image: {
     flex: 1,
@@ -45,9 +45,6 @@ export default {
     width: '100%',
     height: '100%',
   },
-  overlay: {
-    backgroundColor:'rgba(0,0,0,0.5)',
-  },
   input: {
     width: Dimensions.get('window').width - 30,
     height: 50,
@@ -63,8 +60,10 @@ export default {
     alignItems: 'center',
     marginTop: 10,
   },
-  lottie: {
-    width: 200,
-    height: 200,
+  mobileContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: '100%',
+    paddingHorizontal: 10,
   },
 };

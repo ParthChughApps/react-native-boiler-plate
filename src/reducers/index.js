@@ -1,9 +1,6 @@
 import {combineReducers} from 'redux';
-// import {createNavigationReducer} from 'react-navigation-redux-helpers';
+import authReducer from '../reducers/authReducer.js';
 
-// import {AppNavigator} from '../containers/AppNavigator';
-
-// const navReducer = createNavigationReducer(AppNavigator);
-export const rootReducer = combineReducers({
-  // nav: navReducer,
+export const rootReducer = combineReducers({  
+  auth: authReducer,
 });

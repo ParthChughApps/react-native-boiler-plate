@@ -1,48 +1,68 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
-import {View} from 'react-native';
-import YouTubePlayer from 'react-native-youtube-sdk';
+import firestore from '@react-native-firebase/firestore';
+import Layout from '../Layout';
+import * as LoginActionCreators from '../../actions/LoginActions';
+import { withTranslation } from 'react-i18next';
+import {bindActionCreators} from 'redux';
+import { toJS } from '../to-js'
+import Blogs from '../Blogs'
+import Internships from '../Internships'
 import {connect} from 'react-redux';
+import {  ScrollView } from 'react-native-gesture-handler';
 import styles from './styles';
+import Competitions from './Competitions';
 
-const Home = (props) => {
+const Home = props => {
   Home.propTypes = {
     navigation: PropTypes.object.isRequired,
+    LoginActions: PropTypes.object.isRequired,
+    auth: PropTypes.object.isRequired,
   };
-
-  // const {
-  //   navigation: {
-  //     state: {
-  //       params: {videoId},
-  //     },
-  //   },
-  // } = props;
-  // let youTubePlayer = useRef();
+  const [visible, updateVisible] = useState(true);
+  
+  const {auth, 
+    LoginActions:{updateResponse}, 
+    navigation,
+    t
+  } = props; 
+  
+  useEffect(()=> {    
+    firestore()
+      .collection('Users')
+      .doc(auth.response.user.uid)
+      .get()
+      .then(documentSnapshot => {        
+        updateResponse({user: documentSnapshot.data(), userRef: documentSnapshot.ref})
+      })
+  },[]);
+ 
   return (
-    <View style={styles.videoContentContainer}>
-      <YouTubePlayer
-        videoId={'08VxVqSt3WQ'}
-        autoPlay={true}
-        fullscreen={false}
-        showFullScreenButton={true}
-        showSeekBar={true}
-        showPlayPauseButton={true}
-        startTime={0}
-        style={styles.youtubePlayer}
-        onError={(e) => console.log(e)}
-        onChangeState={(e) => console.log(e)}
-        onChangeFullscreen={(e) => console.log(e)}
-      />
-    </View>
+    <ScrollView>
+      <Layout style={{paddingHorizontal: 20}}>  
+        <Competitions 
+          navigation={navigation}
+        />
+        <Blogs />
+        <Internships />
+      </Layout>
+    </ScrollView>
+    
   );
 };
 
-const mapStateToProps = (state) => {
-  return {};
+const mapStateToProps = state => {
+  const {auth} = state;
+  return {auth};
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return {};
+const mapDispatchToProps = dispatch => {
+  return {
+    LoginActions: bindActionCreators(LoginActionCreators, dispatch),
+  };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(toJS(withTranslation()(Home)));
