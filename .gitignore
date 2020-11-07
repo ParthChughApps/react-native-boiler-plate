@@ -23,6 +23,7 @@ DerivedData
 
 # Android/IntelliJ
 #
+android/key.json
 build/
 .idea
 .gradle

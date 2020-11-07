@@ -1,0 +1,75 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:android)
+
+platform :android do
+  desc "Runs all the tests"
+  lane :test do
+    gradle(task: "test")
+  end
+
+  desc "Submit a new Beta Build to Crashlytics Beta"
+  lane :beta do
+    # gradle(task: 'clean')
+    increment_version_code(
+      gradle_file_path: "app/build.gradle"
+    )
+    releaseFile = File.join(Dir.pwd,"../../", "excelegal.keystore")
+    gradle(task: 'clean')
+    gradle(
+      task: 'bundle',
+      build_type: 'Release',
+      print_command: false,
+      properties: {
+        "android.injected.signing.store.file" => releaseFile,
+        "android.injected.signing.store.password" => "parthchughapps",
+        "android.injected.signing.key.alias" => "parthchughapps",
+        "android.injected.signing.key.password" => "parthchughapps",
+      }
+    )
+
+    upload_to_play_store(
+      track: 'internal'
+    )
+  
+    # sh "your_script.sh"
+    # You can also use other beta testing services here
+  end
+
+  desc "Production Deploy a new version to the Google Play"
+  lane :production do
+    increment_version_code(
+      gradle_file_path: "app/build.gradle"
+    )
+    releaseFile = File.join(Dir.pwd,"../../", "excelegal.keystore")
+    gradle(task: 'clean')
+    gradle(
+      task: 'bundle',
+      build_type: 'Release',
+      print_command: false,
+      properties: {
+        "android.injected.signing.store.file" => releaseFile,
+        "android.injected.signing.store.password" => "parthchughapps",
+        "android.injected.signing.key.alias" => "parthchughapps",
+        "android.injected.signing.key.password" => "parthchughapps",
+      }
+    )
+
+    upload_to_play_store(
+      track: 'production'
+    )
+  end
+end
