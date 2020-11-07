@@ -1,9 +1,11 @@
 import React from 'react';
+import {Text} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {connect} from 'react-redux';
-import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
+
+import {NavigationContainer, DarkTheme } from '@react-navigation/native';
 import Home from '../components/Home';
 import Solution from '../components/Solution';
 import Initializing from '../components/Initializing';
@@ -36,9 +38,9 @@ const ReduxNavigation = () => {
   const navigationRef = React.useRef();
 
   const MyTheme = {
-    ...DefaultTheme,
+    ...DarkTheme,
     colors: {
-      ...DefaultTheme.colors,
+      ...DarkTheme.colors,
       primary: 'rgb(255, 45, 85)',
       background: 'rgb(242, 242, 242)',
       card: 'rgb(255, 255, 255)',
@@ -50,18 +52,7 @@ const ReduxNavigation = () => {
   const TabNavigation = () => {
     return (
       <Tab.Navigator
-        screenOptions={({ route }) => ({
-          tabBarIcon: ({ focused, color, size }) => {
-            let iconName;
-            if(route.name === 'Home') {
-              iconName = focused ? <HomeFocused /> : <HomeIcon />
-            } else if(routeName === 'Tests') {
-              route.name = focused ? <TestsFocused />: <TestsIcon />
-            } 
-            // You can return any component that you like here!
-            return <Ionicons name={iconName} size={size} color={color} />;
-          },
-        })}
+        
         tabBarOptions={{
           activeTintColor: 'rgb(255, 45, 85)',
           inactiveTintColor: 'gray',
@@ -137,7 +128,7 @@ const ReduxNavigation = () => {
   return (
     <NavigationContainer
       ref={navigationRef}
-      theme={MyTheme}
+      theme={DarkTheme}
       onReady={() => routeNameRef.current = navigationRef.current.getCurrentRoute().name}
     >
       <PrimaryNavigator />

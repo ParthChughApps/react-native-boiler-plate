@@ -28,7 +28,7 @@ const Quiz = (props) => {
   const {auth, 
     t,
     navigation: { navigate },
-    navigation: {state: {params: {subject}}},
+    route: {params: {subject}},
     navigation
   } = props; 
   const [backButtonDialogVisible, setBackButtonDialogVisible] = useState(false);

@@ -10,7 +10,7 @@ import {
 import PropTypes from 'prop-types';
 import AnimatedLoader from 'react-native-animated-loader';
 import { withTranslation } from 'react-i18next';
-import {CommonActions, StackActions} from '@react-navigation/native';
+import { StackActions } from '@react-navigation/native';
 import Logo from '../../../assets/s-banner.png';
 import authFirebase from '@react-native-firebase/auth';
 import firestore from '@react-native-firebase/firestore';
@@ -74,18 +74,9 @@ const Initialising = props => {
           console.error(error);
         });
     } else {
-      const resetAction = StackActions.reset({
-        index: 0,
-        key: null,
-        actions: [
-          CommonActions.navigate({
-            routeName: 'Home',
-          }),
-        ],
-      });
-      setTimeout(() => {
-        navigation.dispatch(resetAction);
-      }, 1200);
+      navigation.dispatch(
+        StackActions.replace('Home')
+      );
     }
     // return () => {
     //   authFirebase()

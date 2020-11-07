@@ -76,27 +76,14 @@ class CustomDrawer extends React.Component {
                   authFirebase()
                     .signOut()
                     .then(() => {
-                      const resetAction = StackActions.reset({
-                        index: 0,
-                        key: null,
-                        actions: [
-                          CommonActions.navigate({
-                            routeName: 'Splash',
-                          }),
-                        ],
-                      });
-                      navigation.dispatch(resetAction);             
+                      navigation.dispatch(
+                        StackActions.replace('Splash')
+                      );
                     })
                     .catch(() => {
-                      const resetAction = StackActions.reset({
-                        index: 0,
-                        key: null,
-                        actions: [
-                          CommonActions.navigate({
-                            routeName: 'Splash',
-                          }),
-                        ],
-                      });
+                      navigation.dispatch(
+                        StackActions.replace('Splash')
+                      );
                       navigation.dispatch(resetAction);
                     })
                     ;

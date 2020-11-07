@@ -22,9 +22,9 @@ const Initialising = props => {
   const {
     auth,
     navigation: {
-      state: {params},
       navigate,
     },
+    route: {params},
     navigation,
     t,
   } = props;

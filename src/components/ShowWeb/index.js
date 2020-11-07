@@ -46,11 +46,7 @@ class AppWebView extends Component {
   }
 
   render() {
-    const {
-      navigation: {
-        state: {params},
-      },
-    } = this.props;
+    const {route: {params}} = props;
 
     const {visible} = this.state;
 

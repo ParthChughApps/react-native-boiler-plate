@@ -16,6 +16,11 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* osheenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* osheenTests.m */; };
+		313EBEA62556ED370071F526 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 313EBEA12556ED370071F526 /* AntDesign.ttf */; };
+		313EBEA72556ED370071F526 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 313EBEA22556ED370071F526 /* Ionicons.ttf */; };
+		313EBEA82556ED370071F526 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 313EBEA32556ED370071F526 /* FontAwesome.ttf */; };
+		313EBEA92556ED370071F526 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 313EBEA42556ED370071F526 /* EvilIcons.ttf */; };
+		313EBEAA2556ED370071F526 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 313EBEA52556ED370071F526 /* MaterialIcons.ttf */; };
 		3142D5802556ABE40088D1DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3142D57F2556ABE40088D1DE /* GoogleService-Info.plist */; };
 		4FD4A3D6B47F2092911B157B /* libPods-osheen-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E088A29603A6C433A61AD5 /* libPods-osheen-tvOSTests.a */; };
 		7E636278D5F4E31DA27B2FD4 /* libPods-osheen-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D53B593C50A3B2B55D9B7BA /* libPods-osheen-tvOS.a */; };
@@ -56,6 +61,11 @@
 		2D02E47B1E0B4A5D006451C7 /* osheen-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "osheen-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* osheen-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "osheen-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F252DDD675D9BB2DBAEAF48 /* Pods-osheen-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-osheen-tvOS.release.xcconfig"; path = "Target Support Files/Pods-osheen-tvOS/Pods-osheen-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		313EBEA12556ED370071F526 /* AntDesign.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
+		313EBEA22556ED370071F526 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		313EBEA32556ED370071F526 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		313EBEA42556ED370071F526 /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
+		313EBEA52556ED370071F526 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		3142D57F2556ABE40088D1DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		34D7AF02ABF9FCC58C012D7B /* Pods-osheen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-osheen.release.xcconfig"; path = "Target Support Files/Pods-osheen/Pods-osheen.release.xcconfig"; sourceTree = "<group>"; };
 		41A4AD70B8437CA36086273B /* libPods-osheen-osheenTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-osheen-osheenTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +137,7 @@
 		13B07FAE1A68108700A75B9A /* osheen */ = {
 			isa = PBXGroup;
 			children = (
+				313EBEA02556EC9C0071F526 /* Fonts */,
 				3142D57F2556ABE40088D1DE /* GoogleService-Info.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -150,6 +161,18 @@
 				B0E088A29603A6C433A61AD5 /* libPods-osheen-tvOSTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		313EBEA02556EC9C0071F526 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				313EBEA12556ED370071F526 /* AntDesign.ttf */,
+				313EBEA42556ED370071F526 /* EvilIcons.ttf */,
+				313EBEA32556ED370071F526 /* FontAwesome.ttf */,
+				313EBEA22556ED370071F526 /* Ionicons.ttf */,
+				313EBEA52556ED370071F526 /* MaterialIcons.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -344,9 +367,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				313EBEAA2556ED370071F526 /* MaterialIcons.ttf in Resources */,
+				313EBEA72556ED370071F526 /* Ionicons.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				313EBEA92556ED370071F526 /* EvilIcons.ttf in Resources */,
+				313EBEA62556ED370071F526 /* AntDesign.ttf in Resources */,
 				3142D5802556ABE40088D1DE /* GoogleService-Info.plist in Resources */,
+				313EBEA82556ED370071F526 /* FontAwesome.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

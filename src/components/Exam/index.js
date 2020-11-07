@@ -17,11 +17,7 @@ import styles from './styles';
 class Exam extends Component {
   constructor(props) {
     super(props);
-    const {navigation: {
-      state: {
-        params,
-      },
-    } } = props;
+    const {route: {params}} = props;
     this.state = {
       submitExam: params.test,
       show: true,
@@ -31,12 +27,7 @@ class Exam extends Component {
   }
 
   render() {
-    const {auth,navigation: {
-      dispatch,
-      state: {
-        params,
-      },
-    }, t, LoginActions: { updateResponse } } = this.props;
+    const {auth, route: {params}, t, LoginActions: { updateResponse } } = this.props;
     const { submitExam, show, remainingTime } = this.state;
     
     const updateTest = (questionIndex, optionIndex) => {
@@ -93,17 +84,7 @@ class Exam extends Component {
 
     const onSubmitExam = () => {
       addSubmission()
-      const resetAction = StackActions.reset({
-        index: 0,
-        key: null,
-        actions: [
-          CommonActions.navigate({
-            routeName: 'Solution',
-            params: {exam: submitExam, remainingTime}
-          }),
-        ],
-      });
-      dispatch(resetAction);
+      navigation.navigate('Solution')
     }
     const onSubmit = () => {
       this.setState({

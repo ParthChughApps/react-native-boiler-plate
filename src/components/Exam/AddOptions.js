@@ -9,7 +9,7 @@ import Layout from '../Layout';
 class AddOptions extends React.Component {
   constructor(props) {
     super(props);
-    const {navigation: {state: {params}}} = props;
+    const {route: {params},} = props;
     this.state = {
       options: params.options,
       solution: params.question.solution,
@@ -17,7 +17,7 @@ class AddOptions extends React.Component {
   }
 
   render() {
-    const {navigation: {state: {params}}} = this.props;
+    const {route: {params},} = props;
     const {options, solution} = this.state
 
     const {updateOptions, question, questionIndex, updateSolution} = params;    
