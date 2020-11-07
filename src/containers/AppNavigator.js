@@ -146,12 +146,14 @@ const ReduxNavigation = () => {
   )
 
   const AppNavigator = () => (
-    <Stack.Navigator>
+    <Stack.Navigator
+      
+    >
       <>
         <Stack.Screen
           name="Splash"
           component={Initializing}
-          // options={options}
+          options={{headerShown: false}} 
         />
       </>
     </Stack.Navigator>
@@ -161,7 +163,7 @@ const ReduxNavigation = () => {
   const PrimaryNavigator = () => (
     <Stack.Navigator>
       <>
-        <Stack.Screen name="Splash" component={AppNavigator} />
+        <Stack.Screen name="Splash" component={AppNavigator} options={{headerShown: false}}  />
         <Stack.Screen name="Home" component={DrawerNavigation} options={{headerShown: false}} />
         <Stack.Screen name="ShowWeb" component={ShowWeb} />
         <Stack.Screen name="Exam" component={Exam} options={{

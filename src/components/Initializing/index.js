@@ -106,7 +106,7 @@ const Initialising = props => {
                 style={{marginTop: '10%',height: 200, width: 200, resizeMode : 'stretch', margin: 5,  }}
                 resizeMode="contain"
               />
-              <Text style={{fontSize: 45}}>Excelegal</Text>
+              <Text style={{fontSize: 45, color: 'white'}}>Excelegal</Text>
             </Animated.View>
             <View>
               <AnimatedLoader

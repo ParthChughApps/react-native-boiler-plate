@@ -65,7 +65,9 @@ export default {
     borderRadius: 10,
     width: Dimensions.get('window').width - 100,
     paddingTop: 30,
-    paddingBottom: 30
+    paddingBottom: 30,
+    alignItems: 'center',
+    backgroundColor: 'brown'
   },
   txt_sign_up: {
     color: 'white',

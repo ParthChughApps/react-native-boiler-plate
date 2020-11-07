@@ -1,5 +1,5 @@
 import React from 'react'
-import { ImageBackground,ScrollView, Text, TextInput,View, ToastAndroid } from 'react-native';
+import { ImageBackground,ScrollView,TouchableOpacity,  Text, TextInput,View, ToastAndroid } from 'react-native';
 import {useForm, Controller} from 'react-hook-form';
 import { withTranslation } from 'react-i18next';
 import authFirebase from '@react-native-firebase/auth';
@@ -58,14 +58,14 @@ const ForgetPassword = (props) => {
               {t('This is required')}
             </Text> 
           ) : <Text style={{marginBottom: 5}} />}
-          <Button
+          <TouchableOpacity
             style={styles.submit_btn}
             testID="language-chooser-en-btn"
             onPress={handleSubmit(onSubmit)}>
             <Text style={styles.txt_sign_up}>
               {t('Send reset link')}
             </Text>
-          </Button>
+          </TouchableOpacity>
           <View style={{marginTop: 100}}>
             <Text style={{fontSize: 20}}>{t('New Here? ')}<Text style={{fontWeight: 'bold'}} onPress={navigateToSignUp}>{t('Create an account')}</Text></Text>
           </View>

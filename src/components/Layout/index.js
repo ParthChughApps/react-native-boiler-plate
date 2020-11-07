@@ -1,12 +1,12 @@
 import React from 'react';
-import {View, StatusBar} from 'react-native';
+import {View, StatusBar, SafeAreaView} from 'react-native';
 
 const Layout = props => {
   return (
-    <View style={[{flex: 1, backgroundColor: 'black'}, props.style]}>
-      <StatusBar backgroundColor="black" barStyle="light-content" />
+    <SafeAreaView style={[{flex: 1, backgroundColor: 'rgb(29,13,8)'}, props.style]}>
+      <StatusBar backgroundColor="rgba(29,13,8)" barStyle="light-content" />
       {props.children}
-    </View>
+    </SafeAreaView>
   );
 };
 

@@ -45,7 +45,7 @@ class LanguageChooser extends Component {
                 </Button>
               );
             })}
-            <Text>
+            <Text style={{color: 'white'}}>
               Language/भाषा :{' '}
               {this.props.locale === 'en_IN' ? 'English' : 'हिन्दी'}
             </Text>

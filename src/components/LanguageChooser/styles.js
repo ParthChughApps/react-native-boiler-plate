@@ -53,6 +53,7 @@ export default {
     textAlign: 'center',
     lineHeight: 25,
     marginBottom: 20,
+    color: 'white'
   },
   txt_sign_up: {
     color: 'white',

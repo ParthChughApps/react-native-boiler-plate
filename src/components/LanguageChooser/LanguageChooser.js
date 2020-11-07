@@ -1,6 +1,6 @@
 // TODO: Export language chooser screen to a separate npm module
 import React, {Component} from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
@@ -54,7 +54,7 @@ class LanguageChooser extends Component {
           <View style={styles.select_wrapper}>
             {Object.keys(locales).map((singleLocale, index) => {
               return (
-                <Button
+                <TouchableOpacity
                   style={styles.submit_btn}
                   key={index}
                   testID="language-chooser-en-btn"
@@ -64,7 +64,7 @@ class LanguageChooser extends Component {
                   <Text style={styles.txt_sign_up}>
                     {locales[singleLocale]}
                   </Text>
-                </Button>
+                </TouchableOpacity>
               );
             })}
             <Text>

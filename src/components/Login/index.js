@@ -146,8 +146,8 @@ const Initialising = props => {
         <ScrollView style={styles.overlay}>
           <View style={styles.container}>
               <View style={{flex: 1, alignItems: 'center'}}>
-                <Text style={{marginTop: 100, marginBottom: 50, fontSize: 25, fontWeight: 'bold'}}>
-                  {t('Login')}2
+                <Text style={{marginTop: 100, marginBottom: 50, fontSize: 25, fontWeight: 'bold',color: 'white'}}>
+                  {t('Login')}
                 </Text>
                 
                   <View style={{alignItems: 'center'}}>
@@ -179,7 +179,7 @@ const Initialising = props => {
                         onChange={args => args[0].nativeEvent.text}
                         defaultValue=""
                       />
-                      <Text style={{textAlign: 'right'}}>{t("Forgot Password?")} <Text style={{fontWeight: 'bold'}} onPress={() => navigate('ForgetPassword')}>{t("Click here")}</Text></Text>
+                      <Text style={{textAlign: 'right', color: 'white'}}>{t("Forgot Password?")} <Text style={{fontWeight: 'bold'}} onPress={() => navigate('ForgetPassword')}>{t("Click here")}</Text></Text>
                       {errors.password ? (
                         <Text style={{color: 'red', marginBottom: 5}}>
                           {t('This is required')}
@@ -187,18 +187,18 @@ const Initialising = props => {
                       ) : <Text style={{marginBottom: 5}} />}
                     </View>
                     
-                    <Button
+                    <TouchableOpacity
                       style={styles.submit_btn}
                       testID="language-chooser-en-btn"
                       onPress={handleSubmit(onSubmit)}>
                       <Text style={styles.txt_sign_up}>
                         {t('Login')}
                       </Text>
-                    </Button>
+                    </TouchableOpacity>
                   </View>
               </View>
-              <View style={{marginTop: 100}}>
-                <Text style={{fontSize: 20}}>{t('New Here? ')}<Text style={{fontWeight: 'bold'}} onPress={navigateToSignUp}>{t('Create an account')}</Text></Text>
+              <View style={{marginTop: 100 }}>
+                <Text style={{fontSize: 20, color: 'white'}}>{t('New Here? ')}<Text style={{fontWeight: 'bold', color: 'white'}} onPress={navigateToSignUp}>{t('Create an account')}</Text></Text>
               </View>
             </View>      
           </ScrollView>

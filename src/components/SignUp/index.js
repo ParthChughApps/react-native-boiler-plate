@@ -7,7 +7,7 @@ import {
   Text,
   ImageBackground,
   Image,
-  Alert,
+  Dimensions
 } from 'react-native';
 import PropTypes from 'prop-types';
 import {useForm, Controller} from 'react-hook-form';
@@ -154,7 +154,7 @@ const Initialising = props => {
             <View style={styles.container}>
             
               <View style={{flex: 1, alignItems: 'center'}}>
-                <Text style={{marginTop: 100, marginBottom: 50, fontSize: 25, fontWeight: 'bold'}}>
+                <Text style={{marginTop: 100, marginBottom: 50, fontSize: 25, fontWeight: 'bold',color: 'white'}}>
                   {t('Create an account')}
                 </Text>
               
@@ -229,15 +229,23 @@ const Initialising = props => {
                       </Text> 
                     ) : <Text style={{marginBottom: 5}} />}
                   </View>
-                  
-                  <Button
-                    style={styles.submit_btn}
+                  <TouchableOpacity
+                    style={{ marginTop: 20,
+                      width: 180,
+                      alignSelf: 'center',
+                      justifyContent: 'center',
+                      borderRadius: 10,
+                      width: Dimensions.get('window').width - 100,
+                      paddingTop: 30,
+                      paddingBottom: 30,
+                      alignItems: 'center',
+                      backgroundColor: 'brown'}}
                     testID="language-chooser-en-btn"
                     onPress={handleSubmit(onSubmit)}>
                     <Text style={styles.txt_sign_up}>
                       {t('Sign up')}
                     </Text>
-                  </Button>
+                  </TouchableOpacity>
                 </View>
               </View>
             </View>
