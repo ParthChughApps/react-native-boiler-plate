@@ -92,7 +92,7 @@ class Blogs extends React.Component {
                     source={{uri: Object.values(el)[0].image || "https://firebasestorage.googleapis.com/v0/b/excelegal-local.appspot.com/o/posts%2Fd6f8c00f-bbd1-4425-b9b2-11b65f07edb8.png?alt=media&token=5d0f0bc9-8c68-4c74-9c1e-ae39fd93a91a"}}
                     style={styles.logo}
                   />
-                  <Text style={{textAlign: 'center'}}>{Object.values(el)[0].name[auth.locale]}</Text>
+                  <Text style={{textAlign: 'center', color: 'white'}}>{Object.values(el)[0].name[auth.locale]}</Text>
                   <View>
                     <View style={{flexDirection: 'row', alignItems: 'center', marginTop: 20, marginBottom: 5}}>
                       <Image 
@@ -112,10 +112,10 @@ class Blogs extends React.Component {
                   {
                     typeof auth.response.user.internships !== 'undefined' &&  (getAppliedInternshipIds()).includes(Object.keys(el)[0]) ?
                     <TouchableOpacity style={{backgroundColor: '#326EA2', alignItems: 'center', width: 170, padding: 5, borderRadius: 10,marginBottom: 5, justifyContent: 'flex-end'}} onPress={() => applyForInternship(el, true)}>
-                      <Text style={{fontSize: 16}}>{t('UN APPLY')}</Text>
+                      <Text style={{fontSize: 16, color: 'white'}}>{t('UN APPLY')}</Text>
                     </TouchableOpacity> : 
                     <TouchableOpacity style={{backgroundColor: '#326EA2', alignItems: 'center', width: 170, padding: 5, borderRadius: 10,marginBottom: 5, justifyContent: 'flex-end'}} onPress={() => applyForInternship(el, false)}>
-                      <Text style={{fontSize: 16}}>{t('APPLY')}</Text>
+                      <Text style={{fontSize: 16, color: 'white'}}>{t('APPLY')}</Text>
                     </TouchableOpacity> 
                   }
                   

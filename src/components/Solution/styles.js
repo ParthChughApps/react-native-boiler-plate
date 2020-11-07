@@ -6,7 +6,9 @@ export default {
   },
   text: {
     fontSize: 16,
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    color: 'white',
+    textAlign: 'center'
   },
   textCommonButton: {
     color: 'white',

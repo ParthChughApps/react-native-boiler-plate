@@ -17,7 +17,13 @@ const CustomDialog = props => {
     title, 
     buttonText, 
     heading, 
+    negativeButtonVisible
   } = props;
+  
+  CustomDialog.defaultProps = {
+    negativeButtonVisible: true,
+  };
+  
 
   if (isVisible)
     return (
@@ -31,7 +37,7 @@ const CustomDialog = props => {
           <View style={{ backgroundColor: '#000', width: '95%', padding: 15, borderRadius: 4, paddingVertical: 24, borderWidth: 1, borderColor: '#fff'}}>
           {heading && (
             <>
-              <Text style={{ fontSize: 18, lineHeight: 24, textAlign: 'center' }}>{heading}</Text>
+              <Text style={{ fontSize: 18, lineHeight: 24, textAlign: 'center',color: 'white' }}>{heading}</Text>
               <View style={{marginVertical: 15}} />
             </>
           )}
@@ -48,13 +54,16 @@ const CustomDialog = props => {
               style={{ height: 56 }}
             />
             <View style={{marginVertical: 16}} />
-            <CustomButton
-              text={t('Cancel')}
-              color={'rgb(235, 249, 242)'}
-              textColor={'rgb(34, 59, 36)'}
-              onPress={onReject}
-              style={{ height: 56 }}
-            />
+            {negativeButtonVisible &&
+              <CustomButton
+                text={t('Cancel')}
+                color={'rgb(235, 249, 242)'}
+                textColor={'rgb(34, 59, 36)'}
+                onPress={onReject}
+                style={{ height: 56 }}
+              />
+            }
+            
           </View>
         </View>
       </Modal>

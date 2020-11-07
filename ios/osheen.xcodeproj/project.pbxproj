@@ -16,11 +16,6 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* osheenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* osheenTests.m */; };
-		313EBEA62556ED370071F526 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 313EBEA12556ED370071F526 /* AntDesign.ttf */; };
-		313EBEA72556ED370071F526 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 313EBEA22556ED370071F526 /* Ionicons.ttf */; };
-		313EBEA82556ED370071F526 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 313EBEA32556ED370071F526 /* FontAwesome.ttf */; };
-		313EBEA92556ED370071F526 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 313EBEA42556ED370071F526 /* EvilIcons.ttf */; };
-		313EBEAA2556ED370071F526 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 313EBEA52556ED370071F526 /* MaterialIcons.ttf */; };
 		3142D5802556ABE40088D1DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3142D57F2556ABE40088D1DE /* GoogleService-Info.plist */; };
 		4FD4A3D6B47F2092911B157B /* libPods-osheen-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E088A29603A6C433A61AD5 /* libPods-osheen-tvOSTests.a */; };
 		7E636278D5F4E31DA27B2FD4 /* libPods-osheen-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D53B593C50A3B2B55D9B7BA /* libPods-osheen-tvOS.a */; };
@@ -367,14 +362,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				313EBEAA2556ED370071F526 /* MaterialIcons.ttf in Resources */,
-				313EBEA72556ED370071F526 /* Ionicons.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				313EBEA92556ED370071F526 /* EvilIcons.ttf in Resources */,
-				313EBEA62556ED370071F526 /* AntDesign.ttf in Resources */,
 				3142D5802556ABE40088D1DE /* GoogleService-Info.plist in Resources */,
-				313EBEA82556ED370071F526 /* FontAwesome.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -107,7 +107,7 @@ class ShowQuestions extends React.Component  {
       }
       <View>
         <TouchableOpacity style={{backgroundColor: 'yellow', height: 50, justifyContent: 'center', borderRadius: 50, padding: 30}} onPress={() => addNewQuestion()}>
-          <Text style={{color: 'black', textAlign: 'center', fontSize: 24}}>+</Text>
+          <Text style={{color: 'red', textAlign: 'center', fontSize: 24, zIndex: 99}}>+</Text>
         </TouchableOpacity>
       </View>        
     </View>    

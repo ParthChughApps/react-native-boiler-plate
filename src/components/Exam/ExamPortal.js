@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from 'react';
-import {View, Text, Image, ScrollView} from 'react-native';
+import {View, Text, Image, ScrollView, Platform} from 'react-native';
 import PropTypes from 'prop-types';
 import Layout from '../Layout';
 import * as LoginActionCreators from '../../actions/LoginActions';
@@ -15,6 +15,7 @@ import FilerIcon from './noun_filter.png';
 import {Picker} from 'native-base';
 
 class ExamPortal extends React.Component {
+ 
   static propTypes = {
     navigation: PropTypes.object.isRequired,
     LoginActions: PropTypes.object.isRequired,
@@ -74,8 +75,7 @@ class ExamPortal extends React.Component {
   }
   render() {
     const {t} = this.props;
-    const {selected, givenTests, testsData} = this.state;
-
+    const {selected, givenTests, testsData, } = this.state;
     const {auth, LoginActions: { getSubjects, getFilteredSubjects /*, updateUserDetails, upateUniversities */}, navigation, navigation: {navigate}} = this.props; 
 
     const onNavigateToExamPage = (el) => {
@@ -134,8 +134,9 @@ class ExamPortal extends React.Component {
             <Picker
               key={ranIndex}
               mode="dropdown"
-              itemTextStyle={{ backgroundColor: '#000', borderRadius: 5 }}
-              placeholderStyle={{ color: "#bfc6ea", borderRadius: 5 }}
+              placeholder={filter.options ? filter.options[0].name[auth.locale] : ''}
+              itemTextStyle={{ backgroundColor: Platform.select({android: '#000', ios: '#fff' }) , borderRadius: 5 }}
+              placeholderStyle={{ color: "#000", borderRadius: 5 }}
               selectedValue={selected[ranIndex]}
               onValueChange={(data) => onValueChange(data,ranIndex)}
               placeholderIconColor="#007aff"
@@ -143,7 +144,7 @@ class ExamPortal extends React.Component {
             >
               {filter.options.map((option, index) => {
                 return(
-                  <Picker.Item color="black" label={typeof option.name === 'object' ?  option.name[auth.locale]: option.name} value={index} />
+                  <Picker.Item label={typeof option.name === 'object' ?  option.name[auth.locale]: option.name} value={index} />
                 )
               }
               )}
@@ -154,8 +155,8 @@ class ExamPortal extends React.Component {
         }
       </View>
       {auth.response.user.is_admin &&
-      <TouchableOpacity style={{padding: 20}} onPress={() => navigate('AddTest', {topBar: `Add Test in ${Object.values(auth.subjects[selected["0"] || 0])[0].name[auth.locale]}`, subject: auth.subjects[selected["0"] || 0]})}>
-        <Text>Add Test(only be seen to the admin)</Text>
+      <TouchableOpacity style={{padding: 20, }} onPress={() => navigate('AddTest', {topBar: `Add Test in ${Object.values(auth.subjects[selected["0"] || 0])[0].name[auth.locale]}`, subject: auth.subjects[selected["0"] || 0]})}>
+        <Text style={{color: 'white'}}>Add Test(only be seen to the admin)</Text>
       </TouchableOpacity>
       }
       <ScrollView>
@@ -168,8 +169,8 @@ class ExamPortal extends React.Component {
                   style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', borderBottomColor: '#CECECE', borderBottomWidth: 1}}
                   onPress={() => this.setState({dialogVisible: true, onPressExam: () => onNavigateToExamPage(el)}) }
                 >
-                  <View style={{paddingBottom: 20}}>
-                    <Text style={{fontSize: 16, paddingBottom: 10}}>{el.exam.name[auth.locale]}</Text>
+                  <View style={{paddingBottom: 20, marginTop: 10}}>
+                    <Text style={{fontSize: 16, paddingBottom: 10, color: 'white'}}>{el.exam.name[auth.locale]}</Text>
                     <Text style={{fontSize: 14, color: "#ABABAB"}}>{t('Quiz')}{"\n"}{el.exam.total_questions} {t('Questions')} - {el.exam.time / 60} {t('Minutes')} </Text>
                   </View>
                   <View>
@@ -177,7 +178,7 @@ class ExamPortal extends React.Component {
                       typeof givenTests[el.ref.id] === 'undefined' ? 
                       <Text style={{color: '#326EA2', fontSize: 14}}>{t('not attempted')}</Text>
                       :
-                      <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                      <View style={{alignItems: 'center'}}>
                         <View>
                           <Text style={{color: 'white', fontSize: 14,paddingHorizontal: 10,paddingVertical: 5, backgroundColor: '#08BB38', borderRadius: 5}}>{t('Passed')}</Text>
                         </View>

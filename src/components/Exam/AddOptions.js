@@ -17,7 +17,7 @@ class AddOptions extends React.Component {
   }
 
   render() {
-    const {route: {params},} = props;
+    const {route: {params},} = this.props;
     const {options, solution} = this.state
 
     const {updateOptions, question, questionIndex, updateSolution} = params;    

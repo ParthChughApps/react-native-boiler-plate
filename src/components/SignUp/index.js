@@ -87,12 +87,9 @@ const Initialising = props => {
               updateVisible(false);
             });
         }
-        const resetAction = StackActions.reset({
-          index: 0,
-          key: null,
-          actions: [CommonActions.navigate({routeName: 'Splash'})],
-        });  
-        navigation.dispatch(resetAction);
+        navigation.dispatch(
+          StackActions.replace('Splash')
+        );
       });
   }
 

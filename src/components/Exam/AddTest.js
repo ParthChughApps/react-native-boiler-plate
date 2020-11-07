@@ -134,7 +134,7 @@ const Quiz = (props) => {
               {difficulties.map(element => (
                 <View style={{flexDirection: 'row'}}>
                   <CheckBox checked={level.includes(element)} style={{marginRight: 20}} onPress={() => updateCheckbox(element)} />
-                  <Text>{element}</Text>
+                  <Text style={{color: 'white'}}>{element}</Text>
                 </View>
               ))}
               

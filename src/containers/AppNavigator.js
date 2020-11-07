@@ -5,7 +5,7 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {connect} from 'react-redux';
 
-import {NavigationContainer, DarkTheme } from '@react-navigation/native';
+import {NavigationContainer, DarkTheme, DrawerActions } from '@react-navigation/native';
 import Home from '../components/Home';
 import Solution from '../components/Solution';
 import Initializing from '../components/Initializing';
@@ -17,6 +17,7 @@ import AddTest from '../components/Exam/AddTest';
 import AddOptions from '../components/Exam/AddOptions';
 import Exam from '../components/Exam';
 import ShowWeb from '../components/ShowWeb';
+import Ionicons from 'react-native-vector-icons/EvilIcons';
 import Performance from '../components/ProfileDrawer/performance'
 import Donate from '../components/ProfileDrawer/donate'
 import ManageAccount from '../components/ProfileDrawer/manageAccount'
@@ -42,17 +43,50 @@ const ReduxNavigation = () => {
     colors: {
       ...DarkTheme.colors,
       primary: 'rgb(255, 45, 85)',
-      background: 'rgb(242, 242, 242)',
-      card: 'rgb(255, 255, 255)',
-      text: 'rgb(28, 28, 30)',
-      border: 'rgb(199, 199, 204)',
-      notification: 'rgb(255, 69, 58)',
+      
+      text: 'rgb(255, 255, 255)',
+      
     },
   };
+
+  const TabNavigatorStack = ({navigation}) => {
+    return (
+      <Stack.Navigator>
+        <>
+          <Stack.Screen
+            options={{ headerLeft: () => (
+              <Ionicons
+                name="navicon"
+                size={25}
+                style={{padding: 10, color: 'gray'}}
+                onPress={() => {
+                  navigation.dispatch(DrawerActions.toggleDrawer());
+                }}
+              />
+            ),}}
+            name="Home"
+            component={TabNavigation}
+          />
+        </>
+      </Stack.Navigator>
+    )
+  }
+
   const TabNavigation = () => {
     return (
       <Tab.Navigator
-        
+        screenOptions={({ route }) => ({
+          tabBarIcon: ({ focused, color, size }) => {
+            let iconName;
+            if(route.name === 'Home') {
+              iconName = focused ? <HomeFocused /> : <HomeIcon />
+            } else if(route.name === 'Tests') {
+              iconName = focused ? <TestsFocused />: <TestsIcon />
+            } 
+            // You can return any component that you like here!
+            return iconName;
+          },
+        })}
         tabBarOptions={{
           activeTintColor: 'rgb(255, 45, 85)',
           inactiveTintColor: 'gray',
@@ -63,6 +97,30 @@ const ReduxNavigation = () => {
       </Tab.Navigator>
     )
   }
+
+  const options = (props) => {
+    const {navigation} = props;
+    return {
+      headerLeft: () => (
+        <Ionicons
+          name="menu-outline"
+          size={25}
+          style={{padding: 10, color: 'gray'}}
+          onPress={() => {
+            navigation.dispatch(DrawerActions.toggleDrawer());
+            // Do something
+          }}
+        />
+      ),
+    }
+  }
+
+  const DrawerNavigation = () => (
+    <Drawer.Navigator initialRouteName="Home" drawerContent={(props) => <CustomDrawerComponent {...props} />} >
+      <Drawer.Screen name="Home" component={TabNavigatorStack} />
+    </Drawer.Navigator>
+  );
+
 
   const LoginNavigator = () => (
     <Stack.Navigator>
@@ -99,28 +157,24 @@ const ReduxNavigation = () => {
     </Stack.Navigator>
   );
 
-  const homeNavigator = () => (
-    <Stack.Navigator>
-      <>
-      <Stack.Screen name="Home" component={TabNavigation} />
-      <Stack.Screen name="ShowWeb" component={ShowWeb} />
-      <Stack.Screen name="Exam" component={Exam} />
-      <Stack.Screen name="Donate" component={Donate} />
-      <Stack.Screen name="Performance" component={Performance} />
-      <Stack.Screen name="ManageAccount" component={ManageAccount} />
-      <Stack.Screen name="AddTest" component={AddTest} />
-      <Stack.Screen name="AddOptions" component={AddOptions} />
-      <Stack.Screen name="CustomDrawerComponent" component={CustomDrawerComponent} />
-      </>
-    </Stack.Navigator>
-  )
+ 
   const PrimaryNavigator = () => (
     <Stack.Navigator>
       <>
         <Stack.Screen name="Splash" component={AppNavigator} />
-        <Stack.Screen name="Home" component={homeNavigator} />
+        <Stack.Screen name="Home" component={DrawerNavigation} options={{headerShown: false}} />
+        <Stack.Screen name="ShowWeb" component={ShowWeb} />
+        <Stack.Screen name="Exam" component={Exam} options={{
+          gestureEnabled: false,
+        }}/>
+        <Stack.Screen name="Donate" component={Donate} />
+        <Stack.Screen name="Performance" component={Performance} />
+        <Stack.Screen name="ManageAccount" component={ManageAccount} />
+        <Stack.Screen name="AddTest" component={AddTest} />
+        <Stack.Screen name="AddOptions" component={AddOptions} />
+        {/* <Stack.Screen name="CustomDrawerComponent" component={CustomDrawerComponent} /> */}
         <Stack.Screen name="Login" component={LoginNavigator} />
-        <Stack.Screen name="Solution" component={Solution} />
+        <Stack.Screen name="Solution" component={Solution} options={{gestureEnabled: false,}} />
       </>
     </Stack.Navigator>
   );
@@ -128,7 +182,7 @@ const ReduxNavigation = () => {
   return (
     <NavigationContainer
       ref={navigationRef}
-      theme={DarkTheme}
+      theme={MyTheme}
       onReady={() => routeNameRef.current = navigationRef.current.getCurrentRoute().name}
     >
       <PrimaryNavigator />

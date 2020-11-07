@@ -1,15 +1,30 @@
 import {Dimensions} from 'react-native';
 export default {
   wrapperExam: {
-    backgroundColor: 'black',
+    backgroundColor: 'black', 
   },
   slide1: {
     flex: 1,
 
     padding: 10,
   },
+  nextButton: {
+    backgroundColor: 'green', 
+    paddingHorizontal: 30,
+    padding: 10,
+    borderRadius: 5,
+    marginBottom: 30
+  },
+  previousButton: {
+    backgroundColor: 'red', 
+    paddingHorizontal: 30,
+    padding: 10,
+    borderRadius: 5,
+    marginBottom: 30
+  },
   buttonText: {
     color: 'white',
+    
   },
   wrapper: {
     borderRadius: 10,

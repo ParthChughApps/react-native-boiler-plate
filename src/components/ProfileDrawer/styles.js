@@ -1,7 +1,8 @@
 export default {
   textStyle: {
     fontSize: 18,
-    paddingBottom: 20
+    paddingBottom: 20, 
+    color: 'white'
   },
   bottomLine: {
     marginBottom: 20,
