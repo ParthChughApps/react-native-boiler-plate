@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00B99033AE9EB850F1C1961E /* libPods-osheen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 022CF4CA4BF62AC6B2B2CCB0 /* libPods-osheen.a */; };
-		00E356F31AD99517003FC87E /* osheenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* osheenTests.m */; };
+		00B99033AE9EB850F1C1961E /* libPods-Excelegal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 022CF4CA4BF62AC6B2B2CCB0 /* libPods-Excelegal.a */; };
+		00E356F31AD99517003FC87E /* ExcelegalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ExcelegalTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2DCD954D1E0B4F2C00145EB5 /* osheenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* osheenTests.m */; };
+		2DCD954D1E0B4F2C00145EB5 /* ExcelegalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ExcelegalTests.m */; };
 		3142D5802556ABE40088D1DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3142D57F2556ABE40088D1DE /* GoogleService-Info.plist */; };
-		4FD4A3D6B47F2092911B157B /* libPods-osheen-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E088A29603A6C433A61AD5 /* libPods-osheen-tvOSTests.a */; };
-		7E636278D5F4E31DA27B2FD4 /* libPods-osheen-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D53B593C50A3B2B55D9B7BA /* libPods-osheen-tvOS.a */; };
+		4FD4A3D6B47F2092911B157B /* libPods-Excelegal-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E088A29603A6C433A61AD5 /* libPods-Excelegal-tvOSTests.a */; };
+		7E636278D5F4E31DA27B2FD4 /* libPods-Excelegal-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D53B593C50A3B2B55D9B7BA /* libPods-Excelegal-tvOS.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		FFF5508D1A092395C7C46CFA /* libPods-osheen-osheenTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A4AD70B8437CA36086273B /* libPods-osheen-osheenTests.a */; };
+		FFF5508D1A092395C7C46CFA /* libPods-Excelegal-ExcelegalTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A4AD70B8437CA36086273B /* libPods-Excelegal-ExcelegalTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,51 +29,51 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = osheen;
+			remoteInfo = Excelegal;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "osheen-tvOS";
+			remoteInfo = "Excelegal-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* osheenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = osheenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* ExcelegalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExcelegalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* osheenTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = osheenTests.m; sourceTree = "<group>"; };
-		022CF4CA4BF62AC6B2B2CCB0 /* libPods-osheen.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-osheen.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07F961A680F5B00A75B9A /* osheen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = osheen.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = osheen/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = osheen/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = osheen/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = osheen/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = osheen/main.m; sourceTree = "<group>"; };
-		1C133D7A18628B8F2DEE4167 /* Pods-osheen-osheenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-osheen-osheenTests.debug.xcconfig"; path = "Target Support Files/Pods-osheen-osheenTests/Pods-osheen-osheenTests.debug.xcconfig"; sourceTree = "<group>"; };
-		2D02E47B1E0B4A5D006451C7 /* osheen-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "osheen-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* osheen-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "osheen-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F252DDD675D9BB2DBAEAF48 /* Pods-osheen-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-osheen-tvOS.release.xcconfig"; path = "Target Support Files/Pods-osheen-tvOS/Pods-osheen-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* ExcelegalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExcelegalTests.m; sourceTree = "<group>"; };
+		022CF4CA4BF62AC6B2B2CCB0 /* libPods-Excelegal.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Excelegal.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* Excelegal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Excelegal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Excelegal/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Excelegal/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Excelegal/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Excelegal/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Excelegal/main.m; sourceTree = "<group>"; };
+		1C133D7A18628B8F2DEE4167 /* Pods-Excelegal-ExcelegalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Excelegal-ExcelegalTests.debug.xcconfig"; path = "Target Support Files/Pods-Excelegal-ExcelegalTests/Pods-Excelegal-ExcelegalTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2D02E47B1E0B4A5D006451C7 /* Excelegal-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Excelegal-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* Excelegal-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Excelegal-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F252DDD675D9BB2DBAEAF48 /* Pods-Excelegal-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Excelegal-tvOS.release.xcconfig"; path = "Target Support Files/Pods-Excelegal-tvOS/Pods-Excelegal-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		313EBEA12556ED370071F526 /* AntDesign.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		313EBEA22556ED370071F526 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		313EBEA32556ED370071F526 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		313EBEA42556ED370071F526 /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		313EBEA52556ED370071F526 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		3142D57F2556ABE40088D1DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		34D7AF02ABF9FCC58C012D7B /* Pods-osheen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-osheen.release.xcconfig"; path = "Target Support Files/Pods-osheen/Pods-osheen.release.xcconfig"; sourceTree = "<group>"; };
-		41A4AD70B8437CA36086273B /* libPods-osheen-osheenTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-osheen-osheenTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D53B593C50A3B2B55D9B7BA /* libPods-osheen-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-osheen-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		67C3D9C8BA617370024A5334 /* Pods-osheen-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-osheen-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-osheen-tvOS/Pods-osheen-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		7BEEABF30005927E51926C63 /* Pods-osheen-osheenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-osheen-osheenTests.release.xcconfig"; path = "Target Support Files/Pods-osheen-osheenTests/Pods-osheen-osheenTests.release.xcconfig"; sourceTree = "<group>"; };
-		8091554AB35F326205861B10 /* Pods-osheen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-osheen.debug.xcconfig"; path = "Target Support Files/Pods-osheen/Pods-osheen.debug.xcconfig"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = osheen/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B0E088A29603A6C433A61AD5 /* libPods-osheen-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-osheen-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DEFEF3100B0E3D99F4C5E0DD /* Pods-osheen-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-osheen-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-osheen-tvOSTests/Pods-osheen-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		34D7AF02ABF9FCC58C012D7B /* Pods-Excelegal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Excelegal.release.xcconfig"; path = "Target Support Files/Pods-Excelegal/Pods-Excelegal.release.xcconfig"; sourceTree = "<group>"; };
+		41A4AD70B8437CA36086273B /* libPods-Excelegal-ExcelegalTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Excelegal-ExcelegalTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D53B593C50A3B2B55D9B7BA /* libPods-Excelegal-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Excelegal-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		67C3D9C8BA617370024A5334 /* Pods-Excelegal-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Excelegal-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-Excelegal-tvOS/Pods-Excelegal-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		7BEEABF30005927E51926C63 /* Pods-Excelegal-ExcelegalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Excelegal-ExcelegalTests.release.xcconfig"; path = "Target Support Files/Pods-Excelegal-ExcelegalTests/Pods-Excelegal-ExcelegalTests.release.xcconfig"; sourceTree = "<group>"; };
+		8091554AB35F326205861B10 /* Pods-Excelegal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Excelegal.debug.xcconfig"; path = "Target Support Files/Pods-Excelegal/Pods-Excelegal.debug.xcconfig"; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Excelegal/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B0E088A29603A6C433A61AD5 /* libPods-Excelegal-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Excelegal-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEFEF3100B0E3D99F4C5E0DD /* Pods-Excelegal-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Excelegal-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Excelegal-tvOSTests/Pods-Excelegal-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		F494D1E1AB8F6D5A6AC1BDD6 /* Pods-osheen-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-osheen-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-osheen-tvOSTests/Pods-osheen-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		F494D1E1AB8F6D5A6AC1BDD6 /* Pods-Excelegal-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Excelegal-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-Excelegal-tvOSTests/Pods-Excelegal-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFF5508D1A092395C7C46CFA /* libPods-osheen-osheenTests.a in Frameworks */,
+				FFF5508D1A092395C7C46CFA /* libPods-Excelegal-ExcelegalTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00B99033AE9EB850F1C1961E /* libPods-osheen.a in Frameworks */,
+				00B99033AE9EB850F1C1961E /* libPods-Excelegal.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E636278D5F4E31DA27B2FD4 /* libPods-osheen-tvOS.a in Frameworks */,
+				7E636278D5F4E31DA27B2FD4 /* libPods-Excelegal-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,20 +105,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FD4A3D6B47F2092911B157B /* libPods-osheen-tvOSTests.a in Frameworks */,
+				4FD4A3D6B47F2092911B157B /* libPods-Excelegal-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* osheenTests */ = {
+		00E356EF1AD99517003FC87E /* ExcelegalTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* osheenTests.m */,
+				00E356F21AD99517003FC87E /* ExcelegalTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = osheenTests;
+			path = ExcelegalTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -129,7 +129,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* osheen */ = {
+		13B07FAE1A68108700A75B9A /* Excelegal */ = {
 			isa = PBXGroup;
 			children = (
 				313EBEA02556EC9C0071F526 /* Fonts */,
@@ -142,7 +142,7 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = osheen;
+			name = Excelegal;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -150,10 +150,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				022CF4CA4BF62AC6B2B2CCB0 /* libPods-osheen.a */,
-				41A4AD70B8437CA36086273B /* libPods-osheen-osheenTests.a */,
-				4D53B593C50A3B2B55D9B7BA /* libPods-osheen-tvOS.a */,
-				B0E088A29603A6C433A61AD5 /* libPods-osheen-tvOSTests.a */,
+				022CF4CA4BF62AC6B2B2CCB0 /* libPods-Excelegal.a */,
+				41A4AD70B8437CA36086273B /* libPods-Excelegal-ExcelegalTests.a */,
+				4D53B593C50A3B2B55D9B7BA /* libPods-Excelegal-tvOS.a */,
+				B0E088A29603A6C433A61AD5 /* libPods-Excelegal-tvOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -180,9 +180,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* osheen */,
+				13B07FAE1A68108700A75B9A /* Excelegal */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* osheenTests */,
+				00E356EF1AD99517003FC87E /* ExcelegalTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				EDBD22F69413BCED3716DC91 /* Pods */,
@@ -195,10 +195,10 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* osheen.app */,
-				00E356EE1AD99517003FC87E /* osheenTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* osheen-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* osheen-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* Excelegal.app */,
+				00E356EE1AD99517003FC87E /* ExcelegalTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* Excelegal-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* Excelegal-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -206,14 +206,14 @@
 		EDBD22F69413BCED3716DC91 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8091554AB35F326205861B10 /* Pods-osheen.debug.xcconfig */,
-				34D7AF02ABF9FCC58C012D7B /* Pods-osheen.release.xcconfig */,
-				1C133D7A18628B8F2DEE4167 /* Pods-osheen-osheenTests.debug.xcconfig */,
-				7BEEABF30005927E51926C63 /* Pods-osheen-osheenTests.release.xcconfig */,
-				67C3D9C8BA617370024A5334 /* Pods-osheen-tvOS.debug.xcconfig */,
-				2F252DDD675D9BB2DBAEAF48 /* Pods-osheen-tvOS.release.xcconfig */,
-				DEFEF3100B0E3D99F4C5E0DD /* Pods-osheen-tvOSTests.debug.xcconfig */,
-				F494D1E1AB8F6D5A6AC1BDD6 /* Pods-osheen-tvOSTests.release.xcconfig */,
+				8091554AB35F326205861B10 /* Pods-Excelegal.debug.xcconfig */,
+				34D7AF02ABF9FCC58C012D7B /* Pods-Excelegal.release.xcconfig */,
+				1C133D7A18628B8F2DEE4167 /* Pods-Excelegal-ExcelegalTests.debug.xcconfig */,
+				7BEEABF30005927E51926C63 /* Pods-Excelegal-ExcelegalTests.release.xcconfig */,
+				67C3D9C8BA617370024A5334 /* Pods-Excelegal-tvOS.debug.xcconfig */,
+				2F252DDD675D9BB2DBAEAF48 /* Pods-Excelegal-tvOS.release.xcconfig */,
+				DEFEF3100B0E3D99F4C5E0DD /* Pods-Excelegal-tvOSTests.debug.xcconfig */,
+				F494D1E1AB8F6D5A6AC1BDD6 /* Pods-Excelegal-tvOSTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -221,9 +221,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* osheenTests */ = {
+		00E356ED1AD99517003FC87E /* ExcelegalTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "osheenTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ExcelegalTests" */;
 			buildPhases = (
 				AB5616C25B640C28F69AC716 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -236,14 +236,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = osheenTests;
-			productName = osheenTests;
-			productReference = 00E356EE1AD99517003FC87E /* osheenTests.xctest */;
+			name = ExcelegalTests;
+			productName = ExcelegalTests;
+			productReference = 00E356EE1AD99517003FC87E /* ExcelegalTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* osheen */ = {
+		13B07F861A680F5B00A75B9A /* Excelegal */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "osheen" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Excelegal" */;
 			buildPhases = (
 				A70CC3C8976835C5312571B4 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -258,14 +258,14 @@
 			);
 			dependencies = (
 			);
-			name = osheen;
-			productName = osheen;
-			productReference = 13B07F961A680F5B00A75B9A /* osheen.app */;
+			name = Excelegal;
+			productName = Excelegal;
+			productReference = 13B07F961A680F5B00A75B9A /* Excelegal.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* osheen-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* Excelegal-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "osheen-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Excelegal-tvOS" */;
 			buildPhases = (
 				13DA31A06B3A5AB23EC16F02 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
@@ -278,14 +278,14 @@
 			);
 			dependencies = (
 			);
-			name = "osheen-tvOS";
-			productName = "osheen-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* osheen-tvOS.app */;
+			name = "Excelegal-tvOS";
+			productName = "Excelegal-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* Excelegal-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* osheen-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* Excelegal-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "osheen-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Excelegal-tvOSTests" */;
 			buildPhases = (
 				39DDEE3BD773A11E9DD2AB5F /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
@@ -297,9 +297,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "osheen-tvOSTests";
-			productName = "osheen-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* osheen-tvOSTests.xctest */;
+			name = "Excelegal-tvOSTests";
+			productName = "Excelegal-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* Excelegal-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -329,7 +329,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "osheen" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Excelegal" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -342,10 +342,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* osheen */,
-				00E356ED1AD99517003FC87E /* osheenTests */,
-				2D02E47A1E0B4A5D006451C7 /* osheen-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* osheen-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* Excelegal */,
+				00E356ED1AD99517003FC87E /* ExcelegalTests */,
+				2D02E47A1E0B4A5D006451C7 /* Excelegal-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* Excelegal-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -415,7 +415,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-osheen-tvOS-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Excelegal-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -451,7 +451,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-osheen-tvOSTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Excelegal-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -483,7 +483,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-osheen-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Excelegal-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -505,7 +505,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-osheen-osheenTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Excelegal-ExcelegalTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -518,7 +518,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-osheen-osheenTests/Pods-osheen-osheenTests-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Excelegal-ExcelegalTests/Pods-Excelegal-ExcelegalTests-resources.sh",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
@@ -563,7 +563,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-osheen-osheenTests/Pods-osheen-osheenTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Excelegal-ExcelegalTests/Pods-Excelegal-ExcelegalTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F82CBD55A81EA0CBCBEC3E07 /* [CP] Copy Pods Resources */ = {
@@ -572,7 +572,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-osheen/Pods-osheen-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Excelegal/Pods-Excelegal-resources.sh",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
@@ -617,7 +617,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-osheen/Pods-osheen-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Excelegal/Pods-Excelegal-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -665,7 +665,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* osheenTests.m in Sources */,
+				00E356F31AD99517003FC87E /* ExcelegalTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,7 +691,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* osheenTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* ExcelegalTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,12 +700,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* osheen */;
+			target = 13B07F861A680F5B00A75B9A /* Excelegal */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* osheen-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* Excelegal-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -713,14 +713,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C133D7A18628B8F2DEE4167 /* Pods-osheen-osheenTests.debug.xcconfig */;
+			baseConfigurationReference = 1C133D7A18628B8F2DEE4167 /* Pods-Excelegal-ExcelegalTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = osheenTests/Info.plist;
+				INFOPLIST_FILE = ExcelegalTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -730,17 +730,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/osheen.app/osheen";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Excelegal.app/Excelegal";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7BEEABF30005927E51926C63 /* Pods-osheen-osheenTests.release.xcconfig */;
+			baseConfigurationReference = 7BEEABF30005927E51926C63 /* Pods-Excelegal-ExcelegalTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = osheenTests/Info.plist;
+				INFOPLIST_FILE = ExcelegalTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -750,28 +750,28 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/osheen.app/osheen";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Excelegal.app/Excelegal";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8091554AB35F326205861B10 /* Pods-osheen.debug.xcconfig */;
+			baseConfigurationReference = 8091554AB35F326205861B10 /* Pods-Excelegal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A2365H3KHV;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = osheen/Info.plist;
+				INFOPLIST_FILE = Excelegal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.osheen;
-				PRODUCT_NAME = osheen;
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.Excelegal;
+				PRODUCT_NAME = Excelegal;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -780,21 +780,21 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34D7AF02ABF9FCC58C012D7B /* Pods-osheen.release.xcconfig */;
+			baseConfigurationReference = 34D7AF02ABF9FCC58C012D7B /* Pods-Excelegal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A2365H3KHV;
-				INFOPLIST_FILE = osheen/Info.plist;
+				INFOPLIST_FILE = Excelegal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.osheen;
-				PRODUCT_NAME = osheen;
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.Excelegal;
+				PRODUCT_NAME = Excelegal;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -802,7 +802,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 67C3D9C8BA617370024A5334 /* Pods-osheen-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 67C3D9C8BA617370024A5334 /* Pods-Excelegal-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -812,14 +812,14 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "osheen-tvOS/Info.plist";
+				INFOPLIST_FILE = "Excelegal-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.osheen-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.Excelegal-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -829,7 +829,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F252DDD675D9BB2DBAEAF48 /* Pods-osheen-tvOS.release.xcconfig */;
+			baseConfigurationReference = 2F252DDD675D9BB2DBAEAF48 /* Pods-Excelegal-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -839,14 +839,14 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "osheen-tvOS/Info.plist";
+				INFOPLIST_FILE = "Excelegal-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.osheen-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.Excelegal-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -856,7 +856,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DEFEF3100B0E3D99F4C5E0DD /* Pods-osheen-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = DEFEF3100B0E3D99F4C5E0DD /* Pods-Excelegal-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -866,24 +866,24 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "osheen-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "Excelegal-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.osheen-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.Excelegal-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/osheen-tvOS.app/osheen-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Excelegal-tvOS.app/Excelegal-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F494D1E1AB8F6D5A6AC1BDD6 /* Pods-osheen-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = F494D1E1AB8F6D5A6AC1BDD6 /* Pods-Excelegal-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -893,24 +893,24 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "osheen-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "Excelegal-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.osheen-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.Excelegal-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/osheen-tvOS.app/osheen-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Excelegal-tvOS.app/Excelegal-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
 		};
 		83CBBA201A601CBA00E9B192 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8091554AB35F326205861B10 /* Pods-osheen.debug.xcconfig */;
+			baseConfigurationReference = 8091554AB35F326205861B10 /* Pods-Excelegal.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -1025,7 +1025,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "osheenTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ExcelegalTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -1034,7 +1034,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "osheen" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Excelegal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -1043,7 +1043,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "osheen-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Excelegal-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -1052,7 +1052,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "osheen-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Excelegal-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -1061,7 +1061,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "osheen" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Excelegal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

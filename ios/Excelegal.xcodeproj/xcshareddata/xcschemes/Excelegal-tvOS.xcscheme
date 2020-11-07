@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "osheen-tvOS.app"
-               BlueprintName = "osheen-tvOS"
-               ReferencedContainer = "container:osheen.xcodeproj">
+               BuildableName = "Excelegal-tvOS.app"
+               BlueprintName = "Excelegal-tvOS"
+               ReferencedContainer = "container:Excelegal.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          
@@ -34,9 +34,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "osheen-tvOSTests.xctest"
-               BlueprintName = "osheen-tvOSTests"
-               ReferencedContainer = "container:osheen.xcodeproj">
+               BuildableName = "Excelegal-tvOSTests.xctest"
+               BlueprintName = "Excelegal-tvOSTests"
+               ReferencedContainer = "container:Excelegal.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "osheen-tvOS.app"
-            BlueprintName = "osheen-tvOS"
-            ReferencedContainer = "container:osheen.xcodeproj">
+            BuildableName = "Excelegal-tvOS.app"
+            BlueprintName = "Excelegal-tvOS"
+            ReferencedContainer = "container:Excelegal.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -67,9 +67,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "osheen-tvOS.app"
-            BlueprintName = "osheen-tvOS"
-            ReferencedContainer = "container:osheen.xcodeproj">
+            BuildableName = "Excelegal-tvOS.app"
+            BlueprintName = "Excelegal-tvOS"
+            ReferencedContainer = "container:Excelegal.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -86,9 +86,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "osheen-tvOS.app"
-            BlueprintName = "osheen-tvOS"
-            ReferencedContainer = "container:osheen.xcodeproj">
+            BuildableName = "Excelegal-tvOS.app"
+            BlueprintName = "Excelegal-tvOS"
+            ReferencedContainer = "container:Excelegal.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

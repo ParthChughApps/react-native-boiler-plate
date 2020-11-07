@@ -129,7 +129,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.osheen"
+        applicationId "com.accessai.examiner"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
