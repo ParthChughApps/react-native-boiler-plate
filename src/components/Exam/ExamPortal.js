@@ -134,7 +134,7 @@ class ExamPortal extends React.Component {
             <Picker
               key={ranIndex}
               mode="dropdown"
-              placeholder={filter.options ? filter.options[0].name[auth.locale] : ''}
+              placeholder={filter.options.length > 0 ? filter.options[0].name[auth.locale] : ''}
               itemTextStyle={{ backgroundColor: Platform.select({android: '#000', ios: '#fff' }) , borderRadius: 5 }}
               placeholderStyle={{ color: "#000", borderRadius: 5 }}
               selectedValue={selected[ranIndex]}
