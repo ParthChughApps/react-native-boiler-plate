@@ -54,7 +54,7 @@ const Quiz = (props) => {
     // );
   }
   
-  return (
+  return ( auth.quiz.length > 0 ?
     <View style={{marginTop: 20}}>
       <Text style={{fontSize: 20,marginBottom:20}}>{t('Most taken tests')}</Text>        
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
@@ -95,7 +95,7 @@ const Quiz = (props) => {
       
     </ScrollView>
       { visible && <ActivityIndicator />}
-    </View> 
+    </View> : null
   )
 }
 
