@@ -19,11 +19,14 @@ const Blogs = (props) => {
   Blogs.propTypes = {
     LoginActions: PropTypes.object.isRequired,
     auth: PropTypes.object.isRequired,
+    navigation: PropTypes.object.isRequired,
   };
   
   const {auth, 
     LoginActions:{getBlogsAndArticles}, 
-    t
+    t,
+    navigation: { navigate }, 
+    navigation
   } = props; 
   const [visible, updateVisible] = useState(true);
   const [intervals, setIntervals] = useState(1);
@@ -53,6 +56,9 @@ const Blogs = (props) => {
             <TouchableOpacity 
               style={{flex: 1,width: 180, marginHorizontal: 10}}
               key={index}
+              onPress={() => {
+                navigate('ShowWeb', {url: `https://excelegal.in/blog/${Object.keys(el)[0]}?showTopBar=false`, title: Object.values(el)[0].title})}
+              }
             >
               <View>
                 <Image
@@ -60,7 +66,7 @@ const Blogs = (props) => {
                   style={styles.logo}
                 />
                 <Text>{Object.values(el)[0].title}</Text>
-                <Text style={{color: "#A6A6A6"}}>{moment(Object.values(el)[0].updatedAt._seconds).format('ddd, MMMM Do, h:mm a')}</Text>
+                {/* <Text style={{color: "#A6A6A6"}}>{moment(Object.values(el)[0].updatedAt._seconds).format('ddd, MMMM Do, h:mm a')}</Text> */}
               </View>
             </TouchableOpacity>
           )

@@ -43,7 +43,9 @@ const Home = props => {
         <Competitions 
           navigation={navigation}
         />
-        <Blogs />
+        <Blogs 
+          navigation={navigation}
+        />
         <Internships />
       </Layout>
     </ScrollView>

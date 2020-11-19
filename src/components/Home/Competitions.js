@@ -38,8 +38,9 @@ const Competitions = (props) => {
     getCompetitions({callbackFunction});
   }, [])
   
-  return (
+  return ( auth.competitions.length > 0 ?
     <View style={styles.wrapper}>
+      
       <Swiper 
         autoplay={true} 
         autoplayTimeout={10}
@@ -71,7 +72,7 @@ const Competitions = (props) => {
         
       </Swiper>
       { visible && <ActivityIndicator />}
-    </View> 
+    </View> : null
   )
 }
 

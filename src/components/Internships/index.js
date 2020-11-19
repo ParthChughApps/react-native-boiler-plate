@@ -76,8 +76,9 @@ class Blogs extends React.Component {
         return el.id
       }) 
     }
-    return (
+    return (auth.internships.length > 0 ?
       <View style={styles.internshipContainer}>
+        {}
         <Text style={styles.mainHeading}>{t('Internship opportunities')}</Text>
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         <View style={{flex: 1, flexDirection: 'row'}} >
@@ -129,7 +130,7 @@ class Blogs extends React.Component {
         
       </ScrollView>
       { visible && <ActivityIndicator />}
-      </View>
+      </View> : null
     )
   }
 }

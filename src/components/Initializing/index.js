@@ -48,6 +48,7 @@ const Initialising = props => {
       .doc('localization')
       .get()
       .then(querySnapshot => {
+        console.log("querySnapshot", querySnapshot)
         const {languages} = querySnapshot.data();
         updateLanguages(languages);
         updateVisible(false);

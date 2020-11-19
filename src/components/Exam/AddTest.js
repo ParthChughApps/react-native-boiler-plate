@@ -28,10 +28,15 @@ const Quiz = (props) => {
   const {auth, 
     t,
     navigation: { navigate },
-    route: {params: {subject}},
-    navigation
+    route: {params: {subject, topBar}},
+    navigation,
+    
   } = props; 
   const [backButtonDialogVisible, setBackButtonDialogVisible] = useState(false);
+  
+  navigation.setOptions({
+    title: topBar
+  })
 
   function handleBackButtonClick() {
     // navigation.goBack();

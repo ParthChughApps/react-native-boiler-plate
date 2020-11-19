@@ -1,42 +1,34 @@
 {
   "project_info": {
-    "project_number": "184898835508",
-    "firebase_url": "https://excelegal-local.firebaseio.com",
-    "project_id": "excelegal-local",
-    "storage_bucket": "excelegal-local.appspot.com"
+    "project_number": "652693489210",
+    "firebase_url": "https://project-excelegal.firebaseio.com",
+    "project_id": "project-excelegal",
+    "storage_bucket": "project-excelegal.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:184898835508:android:663a7aeeb40f6615262661",
+        "mobilesdk_app_id": "1:652693489210:android:c2130a9c8c118a9d029703",
         "android_client_info": {
           "package_name": "com.accessai.examiner"
         }
       },
       "oauth_client": [
         {
-          "client_id": "184898835508-eo52dgf537n4daltojoou968hpdobmvb.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.accessai.examiner",
-            "certificate_hash": "e9475a19098a171bae25f2ec580bb12c6ebc0aa3"
-          }
-        },
-        {
-          "client_id": "184898835508-v709t94jtdttanoq02j683bbkcc70mdt.apps.googleusercontent.com",
+          "client_id": "652693489210-gvtrjngsd6a8amstml549a5ia6mot78u.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAheU54lfN8quDJFLCGv7g9AIhRmimLoLk"
+          "current_key": "AIzaSyDbcZ2kNzM1J5vK4j0PjIs4E9A8Fj3yMUg"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "184898835508-v709t94jtdttanoq02j683bbkcc70mdt.apps.googleusercontent.com",
+              "client_id": "652693489210-gvtrjngsd6a8amstml549a5ia6mot78u.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
