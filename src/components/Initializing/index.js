@@ -1,38 +1,137 @@
-import React, {useEffect} from 'react';
-import {View, Image} from 'react-native';
-import PropTypes from 'prop-types';
-import Osheen from './osheen.jpeg';
-import {connect} from 'react-redux';
-import styles from './styles';
+import React, {useEffect, useRef, useState} from 'react';
+import {
+  View,
+  Animated,
+  ImageBackground,
+  ScrollView,
+  TouchableOpacity,
+  Text,
+} from 'react-native';
 
-const Initialising = (props) => {
+import PropTypes from 'prop-types';
+import AnimatedLoader from 'react-native-animated-loader';
+import { withTranslation } from 'react-i18next';
+import Logo from '../../../assets/s-banner.png';
+import {CommonActions, StackActions} from '@react-navigation/native';
+import Communications from './Communications'
+import * as LoginActionCreators from '../../actions/LoginActions';
+import * as SettingsActionCreators from '../../actions/SettingsActions';
+
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
+import Layout from '../Layout';
+import styles from './styles';
+import LanguageChooser from '../LanguageChooser';
+
+const Initialising = props => {
   Initialising.propTypes = {
     navigation: PropTypes.object.isRequired,
+    locale: PropTypes.string,
+    locales: PropTypes.object,
+    LoginActions: PropTypes.object.isRequired,
+    SettingsActions: PropTypes.object.isRequired,
+    isLoggedIn: PropTypes.bool,
   };
-  const {navigation} = props;
 
+
+  const [visible, updateVisible] = useState(false);
+  const {
+    navigation: {navigate},
+    isLoggedIn,
+    navigation,
+    t,
+    locales,
+    SettingsActions: {getLocales},
+    LoginActions,
+    route: {params},
+  } = props;
+
+  navigation.setOptions({
+    title: "Select language"
+  })
+
+  const {locale} = props;
+  const moveInY = useRef(new Animated.Value(0)).current;
+
+  const getLanguageData = async () => {
+    updateVisible(true);
+  };
+
+  console.log("params", params);
   useEffect(() => {
-    setTimeout(() => {
-      navigation.replace('Home');
-    }, 2000);
-  }, [navigation]);
+    if (!isLoggedIn) {
+      // navigate('Home', {topBar: ''})
+      getLocales();
+    } else {
+      navigation.dispatch(
+        StackActions.replace('Home')
+      );
+    }
+  }, []);
+
+    
+  const onClickHandler = locale => {
+    LoginActions.handleLocaleChange(locale);
+    navigate('UserPreferences', {topBar: t('Select Your Preference')})
+  };
 
   return (
-    <View style={styles.container}>
-      <Image source={Osheen} style={styles.appLogoCenter} />
-    </View>
+    <Layout>
+      <View style={styles.container}>
+        {/* <ImageBackground source={background} style={styles.imageBackground}>   */}
+          <ScrollView style={styles.overlay}>
+            <View
+              style={[
+                {alignItems: 'center'},
+              
+              ]}>
+              <Communications />
+              
+            </View>
+            <View style={{alignItems: 'center'}}>
+              <Text style={{fontSize: 14, marginBottom: 40}}>भाषा का चयन करें / Select Language</Text>
+              {
+                locales.locales.map((el, index) => (
+                  <View key={index} style={{marginBottom: 40}}>
+                    <TouchableOpacity style={index % 2 === 0 ? styles.fill_button : styles.unfill_button} onPress={() => onClickHandler(el.locale)}>
+                      <Text style={index % 2 === 0 ? styles.fill_button_text : styles.unfill_button_text}>{el.title}</Text>
+                    </TouchableOpacity>
+                  </View>
+                ))
+              }
+            </View>
+            {/* <View> */}
+              {/* <AnimatedLoader
+                visible={visible}
+                source={require('./loader.json')}
+                animationStyle={styles.lottie}
+                speed={1}
+              /> */}
+            {/* </View> */}
+            
+          </ScrollView>
+        {/* </ImageBackground> */}
+      </View>
+    </Layout>
   );
 };
 
-Initialising.navigationOptions = {
-  header: null,
+
+const mapStateToProps = state => {
+  const locale = state.auth.get('locale');
+  const isLoggedIn = state.auth.get('userLoggedIn');
+  const locales = state.auth.get('locales').toJS();
+  return {locale, isLoggedIn, locales};
 };
 
-const mapStateToProps = () => {
-  return {};
-};
-const mapDispatchToProps = () => {
-  return {};
+const mapDispatchToProps = dispatch => {
+  return {
+    LoginActions: bindActionCreators(LoginActionCreators, dispatch),
+    SettingsActions: bindActionCreators(SettingsActionCreators, dispatch),
+  };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Initialising);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(withTranslation()(Initialising));

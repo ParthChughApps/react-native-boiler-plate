@@ -1,7 +1,7 @@
 import {applyMiddleware, createStore, compose} from 'redux';
-import thunk from 'redux-thunk';
+import thunkMiddleware from 'redux-thunk';
+import vanillaPromise from './vanillaPromise';
 import {fromJS} from 'immutable';
-// import {createReactNavigationReduxMiddleware} from 'react-navigation-redux-helpers';
 import {persistStore, persistReducer} from 'redux-persist';
 import FilesystemStorage from 'redux-persist-filesystem-storage';
 import immutableTransform from 'redux-persist-transform-immutable';
@@ -11,7 +11,6 @@ import {rootReducer} from './reducers';
 //   state => state.nav,
 // );
 
-const middlewares = [thunk];
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 function isPlainEnoughObject(o) {
@@ -84,7 +83,7 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 const store = createStore(
   persistedReducer,
-  composeEnhancers(applyMiddleware(...middlewares)),
+  composeEnhancers(applyMiddleware(thunkMiddleware, vanillaPromise)),
 );
 
 export const persistor = persistStore(store);
