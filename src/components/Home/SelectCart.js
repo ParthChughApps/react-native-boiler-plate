@@ -12,12 +12,15 @@ import PropTypes from 'prop-types';
 import { withTranslation } from 'react-i18next';
 import * as LoginActionCreators from '../../actions/LoginActions';
 import {bindActionCreators} from 'redux';
+// import {Picker} from 'react0n'
 // import Dropdown from '../common/dropdown';
+import PopupMenu from '../common/popUpMenu';
 import {connect} from 'react-redux';
 import styles from './styles';
 import {APP_COLOR} from '../../colors';
 import { showMessage, hideMessage } from "react-native-flash-message";
 import paymentSucessful from '../../../assets/card.png';
+import {Picker} from 'native-base';
 
 // functional component 
 const SelectCart = props => {
@@ -86,6 +89,11 @@ const SelectCart = props => {
     }
   },[visible])
 
+  useEffect(() => {
+    setFuelType({price: priceModel[Object.keys(priceModel)[0]]})
+    setPrice(Object.keys(priceModel)[0])
+  },[])
+
   const button = useRef();
 
   const {
@@ -93,8 +101,6 @@ const SelectCart = props => {
     navigation
   } = props;
     
-  let data = Object.keys(priceModel).map(el => ({"value": el}))
-
   const regex =  /[+-]?([0-9]*[.])?[0-9]+/
   const isQuanitityValid = regex.test(parseFloat(value))
 
@@ -114,6 +120,7 @@ const SelectCart = props => {
     navigation.pop()
 
   }
+
   return (
     <View style={{flex: 1}}>  
       <Modal
@@ -131,21 +138,54 @@ const SelectCart = props => {
       </Modal>
       <View style={{backgroundColor: 'white', width: "100%",  position: 'absolute', bottom: 0,  elevation: 5, height: "50%" }}>
       <View>
-        <View style={{flexDirection: 'row', padding: 10, alignItems: 'center'}}>
+        <View style={{flexDirection: 'row', padding: 10, alignItems: 'center',}}>
           { image ?
-              <Image source={{uri: image }} style={{ width: 40, height: 40 }} />
+              <Image source={{uri: image }} style={{ width: 60, height: 60, borderRadius: 10 }} />
             : <Image style={{width: 40, height: 40}} source={{uri: "https://w7.pngwing.com/pngs/630/312/png-transparent-red-map-location-icon-gps-navigation-systems-computer-icons-scalable-graphics-global-positioning-system-red-map-localization-icon-miscellaneous-google-maps-navigation-circle.png"}} />  
           }
-          <View>
+          <View style={{marginLeft: 10}}>
             <Text style={{color: 'black', fontSize: 19}}>{petrolpump.name}</Text>
             <Text style={{color: '#231B1B', fontSize: 9}}>{address ? address.formatted_address : ''}</Text>
           </View>
         </View>      
         <View style={{ justifyContent: 'space-around', marginHorizontal: 20}} >
           <View>
-            <Text style={{width: "90%", alignSelf: 'center', color: '#231B1B' }} >
+            {/* <Text style={{width: "90%", alignSelf: 'center', color: '#231B1B' }} >
               {t('Fuel')}
-            </Text>
+            </Text> */}
+            {/* <Dropdown
+              disabled={false}
+              options={data}
+              onValueChange={(text) => {
+                setFuelType({price: priceModel[text]})
+                setPrice(text)
+                }
+              }
+            /> */}
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+              <Text style={{color: 'black',  fontWeight: 'bold'}}>Select Fuel Type</Text>
+              <Picker
+                mode="dropdown"
+                placeholder={"Select Fuel Type"}
+                selectedValue={price}
+                placeholderStyle={{ color: "#bfc6ea" }}
+                placeholderIconColor="#007aff"
+                onValueChange={(text) => {
+                  console.log("text", text);
+                  setFuelType({price: priceModel[text]})
+                  setPrice(text)
+                }}
+                placeholderIconColor="#007aff"
+              >
+                {
+                  Object.keys(priceModel).map((el) => (
+                    <Picker.Item label={el} value={el} />
+                  ))
+                }
+
+                
+              </Picker>
+            </View>
             {/* <Dropdown
               disabled={false}
               options={data}

@@ -128,7 +128,7 @@ class Home extends React.Component {
     const MyCustomMarkerView= () => {
       return(
         <View>
-          <Image style={{width: 30, height: 30}} source={{uri: "https://w7.pngwing.com/pngs/630/312/png-transparent-red-map-location-icon-gps-navigation-systems-computer-icons-scalable-graphics-global-positioning-system-red-map-localization-icon-miscellaneous-google-maps-navigation-circle.png"}} />
+          <Image style={{width: 40, height: 40, borderRadius: 20}} source={{uri: "https://w7.pngwing.com/pngs/630/312/png-transparent-red-map-location-icon-gps-navigation-systems-computer-icons-scalable-graphics-global-positioning-system-red-map-localization-icon-miscellaneous-google-maps-navigation-circle.png"}} />
         </View>
       )
     }
@@ -193,14 +193,12 @@ class Home extends React.Component {
               <Marker 
                 draggable coordinate={{latitude: parseFloat(element.location.split('(')[1].split(')')[0].split(' ')[1]), longitude: parseFloat(element.location.split('(')[1].split(')')[0].split(' ')[0])}}
                 onPress={() => navigate('ShowPetrolPump', {petrolpump: element, image: auth.orgs.images[element.profile_picture], address: element.address_id ? auth.orgs.addresses[element.address_id] : null})}
-                  
+                title={element.name}  
               > 
                 {auth.orgs.images[element.profile_picture] && 
-                  <Image source={{uri: auth.orgs.images[element.profile_picture] }} style={{ width: 40, height: 40 }} />
+                  <Image source={{uri: auth.orgs.images[element.profile_picture] }} style={{ width: 40, height: 40, borderRadius: 10 }} />
                 }
-                <Callout>
-                  <Text>{element.name}</Text>
-                </Callout>
+                
               </Marker>
             )
           }            

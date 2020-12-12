@@ -11,7 +11,8 @@ export function updateLocales(json) {
 
 export function getLocales() {
   return (dispatch, getState) => {
-    console.log(`${Config.BASE_URL}/api/v1/get-locales`);
+    
+    console.log(`${Config.BASE_URL}`);
     return fetch(`${Config.BASE_URL}/api/v1/get-locales`, {
       method: 'GET',
       headers: {
