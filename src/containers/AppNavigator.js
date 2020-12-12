@@ -178,10 +178,34 @@ const ReduxNavigation = () => {
   // )
   
   const CustomDrawer = () => (
-    <Stack.Navigator mode="modal">
+    <Stack.Navigator
+      screenOptions={{
+          headerShown: false,
+          cardStyle: { backgroundColor: 'transparent' },
+          cardOverlayEnabled: true,
+          cardStyleInterpolator: ({ current: { progress } }) => ({
+          cardStyle: {
+          opacity: progress.interpolate({
+          inputRange: [0, 0.5, 0.9, 1],
+          outputRange: [0, 0.25, 0.7, 1],
+        }),
+      },
+      overlayStyle: {
+            opacity: progress.interpolate({
+            inputRange: [0, 1],
+            outputRange: [0, 0.5],
+            extrapolate: 'clamp',
+          }),
+        },
+      }),
+      }}
+      mode="modal">
       <>
-        <Stack.Screen name="CustomDrawerComponent" component={CustomDrawerComponent} />
-        
+        <Stack.Screen name="Home" component={homeNavigator} options={{headerShown: false}} />
+        <Stack.Screen name="AddAddress" component={AddAddress}  options={{ headerShown: false }}/>
+        <Stack.Screen name="SelectCart" component={SelectCart} options={{ headerShown: false }}/>
+        <Stack.Screen name="ShowPetrolPump" component={ShowPetrolPump} />
+        <Stack.Screen name="ProfileDrawer" component={CustomDrawerComponent} />
       </>
     </Stack.Navigator>
   )
@@ -190,13 +214,8 @@ const ReduxNavigation = () => {
     <Stack.Navigator>
       <>
         <Stack.Screen name="Splash" component={LoginNavigator} options={{headerShown: false}}  />
-        <Stack.Screen name="Home" component={homeNavigator} options={{headerShown: false}} />
-        <Stack.Screen name="AddAddress" component={AddAddress} />
-        <Stack.Screen name="ShowPetrolPump" component={ShowPetrolPump} />
+        <Stack.Screen name="Home" component={CustomDrawer} options={{ headerShown: false }}/>
         <Stack.Screen name="GooglePlacesInput" component={GooglePlacesInput} />
-        <Stack.Screen name="ProfileDrawer" component={CustomDrawer} />
-        <Stack.Screen name="SelectCart" component={SelectCart} />
-        
       </>
     </Stack.Navigator>
   );

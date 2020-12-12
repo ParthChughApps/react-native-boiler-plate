@@ -12,6 +12,7 @@ import Geolocation from '@react-native-community/geolocation';
 import {CommonActions, StackActions} from '@react-navigation/native';
 import GlobalStyles from '../Initializing/styles'
 import PopupMenu from '../common/popUpMenu';
+import Layout from '../Layout'
 import {bindActionCreators} from 'redux';
 import { toJS } from '../to-js';
 import {connect} from 'react-redux';
@@ -143,7 +144,7 @@ class Home extends React.Component {
     }
     
     return (
-      <View style={{flex: 1, flexDirection: 'column', backgroundColor: 'white'}}>
+      <Layout style={{flex: 1, flexDirection: 'column', backgroundColor: 'white'}}>
         <MapView
           showsUserLocation //to show user current location when given access
           loadingEnabled
@@ -264,7 +265,7 @@ class Home extends React.Component {
             {t("Search now")}
           </Text>
         </TouchableOpacity>
-      </View>
+      </Layout>
     );
   }
 }
