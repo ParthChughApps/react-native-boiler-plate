@@ -89,7 +89,7 @@ class Home extends React.Component {
         navigate,
         goBack
       },
-      LoginActions: {handleCoordinates},
+      LoginActions: {handleCoordinates, getNearbyOrgs},
       navigation,
       LoginActions,
       t,
@@ -132,6 +132,15 @@ class Home extends React.Component {
         </View>
       )
     }
+
+    const callbackFunction = (el) => {
+      // 
+      getNearbyOrgs({data: {
+        location: el.nativeEvent.coordinate,
+        nearby_distance: 10000
+      }})
+
+    }
     
     return (
       <View style={{flex: 1, flexDirection: 'column', backgroundColor: 'white'}}>
@@ -142,7 +151,10 @@ class Home extends React.Component {
           showsMyLocationButton={true}
           style={styles.map}
           onPoiClick={this.onPoiClick}
-          onPress={e => this.onMapPress(e)}
+          onPress={e => {
+            this.onMapPress(e)
+            callbackFunction(e);
+          }}
           region={ {
             latitude: this.state.coordinate.latitude,
             longitude: this.state.coordinate.longitude,
@@ -156,6 +168,9 @@ class Home extends React.Component {
               <Marker 
                 draggable 
                 coordinate = {this.state.coordinate}
+                onPress={() => {
+                  console.log("data");
+                }}
                 // onDragEnd={(e) => 
                 //   {
                 //     this.setState({
