@@ -123,9 +123,9 @@ const Seller = props => {
                   borderRadius: 200,
                 }}/>
                 :
-                <Icon name="user-circle-o" size={100} style={{marginRight: 10, textAlign: 'center'}} />
+                <Icon color={APP_COLOR} name="user-circle-o" size={100} style={{marginRight: 10, textAlign: 'center', }} />
             }
-            <Text style={styles.addLogo}>{t('Add Logo')}</Text>
+            <Text style={[styles.addLogo, {color: APP_COLOR}]}>{t('Add Logo')}</Text>
           </TouchableOpacity>
           <View style={{alignItems: 'center', marginTop: 20}}>
             <View style={styles.mobileContainer}>
@@ -158,7 +158,7 @@ const Seller = props => {
                 />
                 {!emailExist && <Text style={{color: 'red'}}>{t("Your email already exists")}</Text> }
                 {errors.email ? (
-                  <Text style={{color: 'black', marginBottom: 5}}>
+                  <Text style={[{color: 'black', marginBottom: 5}, styles.placeholder]}>
                     {t('This is required')}
                   </Text> 
                 ) : <Text style={{marginBottom: 5}} />}
@@ -176,7 +176,7 @@ const Seller = props => {
                   defaultValue=""
                 />
                 {errors.password ? (
-                  <Text style={{color: 'black', marginBottom: 5}}>
+                  <Text style={[{color: 'black', marginBottom: 5}, styles.placeholder]}>
                     {t('This is required')}
                   </Text> 
                 ) : <Text style={{marginBottom: 5}} />}

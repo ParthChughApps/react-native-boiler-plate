@@ -104,4 +104,7 @@ export default {
     fontSize: 15,
     paddingLeft: 20,
   },
+  unfill_button_text: {
+    color: APP_COLOR
+  }
 };
