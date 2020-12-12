@@ -11,8 +11,14 @@ const GooglePlacesInput = (props) => {
 
       navigate
     },
+    navigation,
     route: {params: {getLocation}},
   } = props;
+
+  navigation.setOptions({
+    title: "Select Location"
+  })
+
   // console.log(getLocation);
   return (
     <View style={{flex: 1, backgroundColor: 'white'}}> 

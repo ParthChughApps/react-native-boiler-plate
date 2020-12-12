@@ -171,7 +171,6 @@ export function registerOrg({data, callbackFunction}) {
 export function getNearbyOrgs({data}) {
   return (dispatch, getState) => {
     const { auth }  = getState()
-    console.log("---data---", data)
     return fetch(`${Config.BASE_URL}/api/v1/get-nearby-orgs?latitude=${data.location.latitude}&longitude=${data.location.longitude}&nearby_distance=${data.nearby_distance}&locale=${auth.get('locale')}`, {
       method: 'GET',
       headers: {

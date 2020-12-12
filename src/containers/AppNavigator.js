@@ -51,37 +51,37 @@ const ReduxNavigation = () => {
       <Stack.Screen
         name="Home"
         component={Home}
-        // options={options}
+        options={options}
       />
       <Stack.Screen
         name="ShowWeb"
         component={ShowWeb}
-        // options={options}
+        options={options}
       />
       <Stack.Screen
         name="LoginOTP"
         component={LoginOTP}
-        // options={options}
+        options={options}
       />
       <Stack.Screen
         name="OTPVerify"
         component={OTPVerify}
-        // options={options}
+        options={options}
       />
       <Stack.Screen
         name="Account"
         component={Account}
-        // options={options}
+        options={options}
       />
       <Stack.Screen
         name="Orders"
         component={Orders}
-        // options={options}
+        options={options}
       />
       <Stack.Screen
         name="SingleOrder"
         component={SingleOrder}
-        // options={options}
+        options={options}
       />
       </>
     </Stack.Navigator>
@@ -99,57 +99,57 @@ const ReduxNavigation = () => {
       <Stack.Screen
         name="UserPreferences"
         component={UserPreferences}
-        // options={options}
+        options={options}
       />
       <Stack.Screen
         name="Seller"
         component={Seller}
-        // options={options}
+        options={options}
       />
       <Stack.Screen
         name="Register"
         component={Register}
-        // options={options}
+        options={options}
       />
       <Stack.Screen
         name="ChooseScreen"
         component={ChooseScreen}
-        // options={options}
+        options={options}
       />
       <Stack.Screen
         name="Login"
         component={Login}
-        // options={options}
+        options={options}
       />
       <Stack.Screen
         name="SignUp"
         component={SignUp}
-        // options={options}
+        options={options}
       />
       <Stack.Screen
         name="ForgetPassword"
         component={ForgetPassword}
-        // options={options}
+        options={options}
       />
       <Stack.Screen
         name="ChooseSignUp"
         component={ChooseSignUp}
-        // options={options}
+        options={options}
       />
       <Stack.Screen
         name="ChooseLogin"
         component={ChooseLogin}
-        // options={options}
+        options={options}
       />
       <Stack.Screen
         name="LoginOTP"
         component={LoginOTP}
-        // options={options}
+        options={options}
       />
       <Stack.Screen
         name="OTPVerify"
         component={OTPVerify}
-        // options={options}
+        options={options}
       />
     </>
   </Stack.Navigator>
@@ -210,12 +210,44 @@ const ReduxNavigation = () => {
     </Stack.Navigator>
   )
 
+  const ModalScreen = () => (
+    <Stack.Navigator 
+        screenOptions={{
+          headerShown: false,
+          cardStyle: { backgroundColor: 'transparent' },
+          cardOverlayEnabled: true,
+          cardStyleInterpolator: ({ current: { progress } }) => ({
+          cardStyle: {
+          opacity: progress.interpolate({
+          inputRange: [0, 0.5, 0.9, 1],
+          outputRange: [0, 0.25, 0.7, 1],
+        }),
+      },
+      overlayStyle: {
+            opacity: progress.interpolate({
+            inputRange: [0, 1],
+            outputRange: [0, 0.5],
+            extrapolate: 'clamp',
+          }),
+        },
+      }),
+      }}>
+      <>
+        <Stack.Screen name="ProfileDrawer" component={CustomDrawerComponent} />
+      </>
+    </Stack.Navigator>
+  )
+
+  const options={
+    headerTintColor: APP_COLOR,
+  }
   const PrimaryNavigator = () => (
     <Stack.Navigator>
       <>
         <Stack.Screen name="Splash" component={LoginNavigator} options={{headerShown: false}}  />
-        <Stack.Screen name="Home" component={CustomDrawer} options={{ headerShown: false }}/>
-        <Stack.Screen name="GooglePlacesInput" component={GooglePlacesInput} />
+        <Stack.Screen name="Home" component={CustomDrawer} options={{...{ headerShown: false }, ...options}}/>
+        <Stack.Screen name="GooglePlacesInput" component={GooglePlacesInput}  />
+        <Stack.Screen name="ProfileDrawer" component={ModalScreen} options={{ headerShown: false }}/>
       </>
     </Stack.Navigator>
   );
