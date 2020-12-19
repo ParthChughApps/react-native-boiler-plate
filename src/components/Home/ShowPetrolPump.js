@@ -58,11 +58,11 @@ const Account = props => {
         <View style={{flex: 1, justifyContent: 'space-around'}} >
           <View style={{flexDirection: 'row', padding: 10, alignItems: 'center'}}>
             { image ?
-              <Image source={{uri: image }} style={{ width: 40, height: 40 }} />
+              <Image source={{uri: image }} style={{ width: 60, height: 60, borderRadius: 10 }} />
             : <Image style={{width: 40, height: 40}} source={{uri: "https://w7.pngwing.com/pngs/630/312/png-transparent-red-map-location-icon-gps-navigation-systems-computer-icons-scalable-graphics-global-positioning-system-red-map-localization-icon-miscellaneous-google-maps-navigation-circle.png"}} />  
             }
             
-            <View>
+            <View style={{marginLeft: 10}}>
               <Text style={{color: 'black', fontSize: 19}}>{petrolpump?.name}</Text>
               <Text style={{color: '#231B1B', fontSize: 9}}>{address ? address.formatted_address : ''}</Text>
             </View>

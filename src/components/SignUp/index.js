@@ -111,16 +111,16 @@ const SignUp = props => {
   ]
 
   return (  
-    <View style={{flex: 1}}>
+    <View style={{flex: 1, backgroundColor: 'white'}}>
        <AnimatedLoader
         visible={visible}
         source={require('../Initializing/loader.json')}
         animationStyle={styles.lottie}
         speed={1}
       />
-      <ScrollView contentContainerStyle={{flex: 1}}>
-        <Layout style={{ flex: 1, ...styles.container}}  >                      
-          <View>
+      <ScrollView  style={{flex: 1, marginTop: 50}}>
+      <Layout style={{ flex: 1, ...styles.container, marginBottom: 40}}>
+          <View style={{flex: 1}}>
             <Text style={styles.placeholder}>{t(params.type)} {t('Name')}</Text>
             <Controller
               as={<TextInput placeholderTextColor = "#FFFFFF" />}

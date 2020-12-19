@@ -196,7 +196,7 @@ const Seller = props => {
                     onChange={args => args[0].nativeEvent.text}
                     defaultValue=""
                   />
-                  <Iconions style={styles.searchIcon} name="ios-locate" size={20} />
+                  <Iconions style={styles.searchIcon} name="ios-locate" size={20} color={APP_COLOR} />
                 </View>
                 
               </TouchableOpacity>

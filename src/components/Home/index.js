@@ -261,7 +261,7 @@ class Home extends React.Component {
         </View>
         <TouchableOpacity style={styles.searchBar} onPress={() => navigate('GooglePlacesInput', {getLocation})}>
           <Iconions style={styles.searchIcon} name="ios-search" size={25} color="gray" />
-          <Text style={{flex: 1,textAlignVertical: 'center', borderWidth: 1, color: 'gray', height: 50,marginLeft: 20, borderRadius: 10,  borderColor: 'white', }}>
+          <Text style={{flex: 1,textAlignVertical: 'center', borderWidth: 1, color: 'gray', height: 50,marginLeft: 20, borderRadius: 10,  borderColor: 'white', textAlignVertical: 'center'}}>
             {t("Search now")}
           </Text>
         </TouchableOpacity>
