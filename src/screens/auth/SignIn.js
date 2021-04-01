@@ -6,8 +6,7 @@ export default function SignIn(props) {
   return (
     <View>
       <Text>Sign In Screen</Text>
-      <Text onPress={() => navigate('SignUp')}>Go to Get Sign Up</Text>
-      <Text onPress={() => navigate('forgotPassword')}>Go to Get Forgot Password</Text>
+      <Text onPress={() => navigate('Home')}>Go to Home</Text>
     </View>
   )
 }

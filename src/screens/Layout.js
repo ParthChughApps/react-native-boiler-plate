@@ -6,7 +6,7 @@ export const Layout = (WrappedComponent) => {
     
     return (
       <SafeAreaView style={{flex: 1}}>
-        <ScrollView >
+        <ScrollView>
           <WrappedComponent {...props} />
         </ScrollView>
       </SafeAreaView>

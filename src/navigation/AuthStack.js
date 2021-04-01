@@ -4,8 +4,6 @@ import {
   createStackNavigator,
 } from '@react-navigation/stack';
 import SignIn from '../screens/auth/SignIn';
-import SignUp from '../screens/auth/SignUp';
-import ForgotPassword from '../screens/auth/ForgotPassword';
 import {BottomTabs} from './BottomStack'
 import {Layout} from '../screens/Layout'
 
@@ -26,14 +24,6 @@ export const AuthNavigator = () => {
       <AuthStackNavigator.Screen
         name="signIn"
         component={Layout(SignIn)}
-      />
-      <AuthStackNavigator.Screen
-        name="SignUp"
-        component={Layout(SignUp)}
-      />
-      <AuthStackNavigator.Screen
-        name="forgotPassword"
-        component={Layout(ForgotPassword)}
       />
       <AuthStackNavigator.Screen
         name="Home"
