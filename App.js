@@ -14,16 +14,16 @@ import {
 } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {IntroNavigator} from './src/navigation/IntroStack';
+import {UserProvider} from './src/contexts/user'
 
 const App =  () => {
   return (
-    <>
+    <UserProvider>
       <StatusBar barStyle={'dark-content'} />
       <NavigationContainer>
         <IntroNavigator />
-        {/* <Text>asdasd</Text> */}
       </NavigationContainer>
-    </>
+    </UserProvider>
   );
 };
 
