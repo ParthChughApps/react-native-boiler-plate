@@ -21,15 +21,16 @@ export const IntroNavigator = () => {
     <IntroStackNavigator.Navigator screenOptions={defaultNavOptions}>
       <IntroStackNavigator.Screen
         name="intro"
-        title="Intro"
+        options={{ title: "Intro", headerShown: false }}
         component={Layout(Intro)}
       />
       <IntroStackNavigator.Screen
         name="getStarted"
+        options={{ title: "Choose Login Type" }}
         component={Layout(GetStarted)}
       />
       <IntroStackNavigator.Screen
-        name="signIn"
+        name="authentication"
         component={AuthNavigator}
         options={{headerShown: false}}
       />

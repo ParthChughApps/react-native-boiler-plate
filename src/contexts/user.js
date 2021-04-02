@@ -3,6 +3,7 @@ import React, { useReducer, createContext } from 'react';
 const initialState = {
   user: {},
   isLoggedIn: false,
+  loginType: ''
 }
 
 const userReducer = (state, action) => {
@@ -11,6 +12,11 @@ const userReducer = (state, action) => {
       return  {
         ...state,
         user: action.payload
+      }
+    case 'LOGIN_TYPE': 
+      return  {
+        ...state,
+        loginType: action.payload
       }
     case 'IS_LOGGED_IN':
       return  {
