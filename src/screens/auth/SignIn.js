@@ -2,6 +2,7 @@ import React, { useContext, createRef } from 'react';
 import { StatusBar, TextInput, StyleSheet } from 'react-native';
 import {View, Text, Colors, Button, Incubator, Typography} from 'react-native-ui-lib';
 import { UserContext } from '../../contexts/user'
+import { CommonActions } from '@react-navigation/native';
 import { Login } from '../../assets/svgs'
 
 const {TextField} = Incubator;
@@ -39,6 +40,14 @@ export default function SignIn(props) {
           onPress={() => {
             userDispatch({ type: 'IS_LOGGED_IN', payload: !isLoggedIn })
             navigate('Home')
+            navigation.dispatch(
+              CommonActions.reset({
+                index: 0,
+                routes: [
+                  { name: 'Home' },
+                ],
+              })
+            )
           }}
         />
       </View>
