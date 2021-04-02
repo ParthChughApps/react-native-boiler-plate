@@ -11,7 +11,9 @@ const IntroStackNavigator = createStackNavigator();
 
 const defaultNavOptions = {
   cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
-  
+  headerTitleAlign: {
+    fontFamily: 'SofiaProRegular'
+  }
 };
 
 export const IntroNavigator = () => {
@@ -19,6 +21,7 @@ export const IntroNavigator = () => {
     <IntroStackNavigator.Navigator screenOptions={defaultNavOptions}>
       <IntroStackNavigator.Screen
         name="intro"
+        title="Intro"
         component={Layout(Intro)}
       />
       <IntroStackNavigator.Screen

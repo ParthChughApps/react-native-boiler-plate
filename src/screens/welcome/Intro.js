@@ -7,7 +7,7 @@ function Intro(props) {
 
   return (
     <View>
-      <Text>Intro Screen</Text>
+      <Text style={{fontFamily: 'SofiaProRegular',}}>Intro Screen</Text>
       <Text onPress={() => navigate('getStarted')}>Go to Get Started Screen</Text>
     </View>
   )

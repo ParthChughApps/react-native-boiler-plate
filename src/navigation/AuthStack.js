@@ -12,10 +12,12 @@ const AuthStackNavigator = createStackNavigator();
 const defaultNavOptions = {
   headerStyle: {
     backgroundColor: '#25385d',
+    fontFamily: 'SofiaProRegular'
   },
   headerTitleAlign: 'center',
   headerTintColor: 'white',
   cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+  
 };
 
 export const AuthNavigator = () => {

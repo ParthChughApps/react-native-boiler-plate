@@ -8,12 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* eduaakar_V2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* eduaakar_V2Tests.m */; };
+		04A498E269104826963E337C /* SofiaProLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4740B34B69D2404FA691A727 /* SofiaProLight.otf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		1A970C254C974F458DA3B021 /* SofiaProBlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 57F58EBC734247BF99FE63CE /* SofiaProBlackItalic.otf */; };
 		1B43468F810870027750433B /* libPods-eduaakar_V2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97ACA9C27A50176062F06F92 /* libPods-eduaakar_V2.a */; };
+		1B61DEE94108482E8CD31268 /* SofiaProBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3872EBEF86F74EF9B81A65D4 /* SofiaProBoldItalic.otf */; };
+		325FDC8B0A104CF0B4FF3E42 /* SofiaProBlack.otf in Resources */ = {isa = PBXBuildFile; fileRef = 368E4DAE61504AF2902B68D4 /* SofiaProBlack.otf */; };
+		42ED83137BC2483FBCF8E426 /* SofiaProExtraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B89983705EEB49C29CC69122 /* SofiaProExtraLightItalic.otf */; };
+		4FEDB6633A8E4E3E8F6CCA58 /* SofiaProLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = EB5635E6DBA7441C86F27AE1 /* SofiaProLightItalic.otf */; };
+		5B5014B5276745F8A08FD76D /* SofiaProSemiBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F7AFC2BF48724B3196D79961 /* SofiaProSemiBoldItalic.otf */; };
+		6F4570BD60944BFB8BE58FFF /* SofiaProRegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 92FD3BFD98E04F158F4EA2F9 /* SofiaProRegularItalic.otf */; };
+		7DBD12130EE74CFFB8DABCBA /* SofiaProBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 77366C872B594DCC877C0297 /* SofiaProBold.otf */; };
+		7DCEDB0DB34E44AF9F94CC58 /* SofiaProSemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 71897E0CCAD845939BFAF380 /* SofiaProSemiBold.otf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		84F14CE21606467491C7052E /* SofiaProUltraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2008D7E863584CB694094E2E /* SofiaProUltraLightItalic.otf */; };
+		9CAE7BD07EB647C1B968EE83 /* SofiaProMediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0D7F6FFA2E2A4A4194F51CE6 /* SofiaProMediumItalic.otf */; };
+		A18266394686411F8A9A843C /* SofiaProExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 092761566C8347D9AF2F53C6 /* SofiaProExtraLight.otf */; };
+		A87A0CF19C1D4FBFB034CE69 /* SofiaProUltraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6CA2907A21794B09B719BC39 /* SofiaProUltraLight.otf */; };
+		D0D1D046856D41E98FDFC712 /* SofiaProMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 70F64FFF150C41A4B6A1F85F /* SofiaProMedium.otf */; };
 		FEFF96DD04FA6E4BFA17E3D1 /* libPods-eduaakar_V2-eduaakar_V2Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B506978BEF0054AEDD8E8C15 /* libPods-eduaakar_V2-eduaakar_V2Tests.a */; };
+		FFBBDB27050646B0A5D631F5 /* SofiaProRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42D1A0A7B318464F936DA75B /* SofiaProRegular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,18 +46,34 @@
 		00E356EE1AD99517003FC87E /* eduaakar_V2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eduaakar_V2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* eduaakar_V2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = eduaakar_V2Tests.m; sourceTree = "<group>"; };
+		092761566C8347D9AF2F53C6 /* SofiaProExtraLight.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SofiaProExtraLight.otf; path = ../src/assets/fonts/SofiaProExtraLight.otf; sourceTree = "<group>"; };
+		0D7F6FFA2E2A4A4194F51CE6 /* SofiaProMediumItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SofiaProMediumItalic.otf; path = ../src/assets/fonts/SofiaProMediumItalic.otf; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* eduaakar_V2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eduaakar_V2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = eduaakar_V2/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = eduaakar_V2/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = eduaakar_V2/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = eduaakar_V2/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = eduaakar_V2/main.m; sourceTree = "<group>"; };
+		2008D7E863584CB694094E2E /* SofiaProUltraLightItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SofiaProUltraLightItalic.otf; path = ../src/assets/fonts/SofiaProUltraLightItalic.otf; sourceTree = "<group>"; };
+		368E4DAE61504AF2902B68D4 /* SofiaProBlack.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SofiaProBlack.otf; path = ../src/assets/fonts/SofiaProBlack.otf; sourceTree = "<group>"; };
+		3872EBEF86F74EF9B81A65D4 /* SofiaProBoldItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SofiaProBoldItalic.otf; path = ../src/assets/fonts/SofiaProBoldItalic.otf; sourceTree = "<group>"; };
+		42D1A0A7B318464F936DA75B /* SofiaProRegular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SofiaProRegular.otf; path = ../src/assets/fonts/SofiaProRegular.otf; sourceTree = "<group>"; };
+		4740B34B69D2404FA691A727 /* SofiaProLight.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SofiaProLight.otf; path = ../src/assets/fonts/SofiaProLight.otf; sourceTree = "<group>"; };
+		57F58EBC734247BF99FE63CE /* SofiaProBlackItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SofiaProBlackItalic.otf; path = ../src/assets/fonts/SofiaProBlackItalic.otf; sourceTree = "<group>"; };
+		6CA2907A21794B09B719BC39 /* SofiaProUltraLight.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SofiaProUltraLight.otf; path = ../src/assets/fonts/SofiaProUltraLight.otf; sourceTree = "<group>"; };
+		70F64FFF150C41A4B6A1F85F /* SofiaProMedium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SofiaProMedium.otf; path = ../src/assets/fonts/SofiaProMedium.otf; sourceTree = "<group>"; };
+		71897E0CCAD845939BFAF380 /* SofiaProSemiBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SofiaProSemiBold.otf; path = ../src/assets/fonts/SofiaProSemiBold.otf; sourceTree = "<group>"; };
+		77366C872B594DCC877C0297 /* SofiaProBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SofiaProBold.otf; path = ../src/assets/fonts/SofiaProBold.otf; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = eduaakar_V2/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		92FD3BFD98E04F158F4EA2F9 /* SofiaProRegularItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SofiaProRegularItalic.otf; path = ../src/assets/fonts/SofiaProRegularItalic.otf; sourceTree = "<group>"; };
 		97ACA9C27A50176062F06F92 /* libPods-eduaakar_V2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-eduaakar_V2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A45120A6A4AC515AC7AFDFA6 /* Pods-eduaakar_V2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eduaakar_V2.release.xcconfig"; path = "Target Support Files/Pods-eduaakar_V2/Pods-eduaakar_V2.release.xcconfig"; sourceTree = "<group>"; };
 		B506978BEF0054AEDD8E8C15 /* libPods-eduaakar_V2-eduaakar_V2Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-eduaakar_V2-eduaakar_V2Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B89983705EEB49C29CC69122 /* SofiaProExtraLightItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SofiaProExtraLightItalic.otf; path = ../src/assets/fonts/SofiaProExtraLightItalic.otf; sourceTree = "<group>"; };
 		BA18CD2E96512139900E7713 /* Pods-eduaakar_V2-eduaakar_V2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eduaakar_V2-eduaakar_V2Tests.release.xcconfig"; path = "Target Support Files/Pods-eduaakar_V2-eduaakar_V2Tests/Pods-eduaakar_V2-eduaakar_V2Tests.release.xcconfig"; sourceTree = "<group>"; };
+		EB5635E6DBA7441C86F27AE1 /* SofiaProLightItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SofiaProLightItalic.otf; path = ../src/assets/fonts/SofiaProLightItalic.otf; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F7AFC2BF48724B3196D79961 /* SofiaProSemiBoldItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SofiaProSemiBoldItalic.otf; path = ../src/assets/fonts/SofiaProSemiBoldItalic.otf; sourceTree = "<group>"; };
 		F9C86F1766B1DA55847F0CF6 /* Pods-eduaakar_V2-eduaakar_V2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eduaakar_V2-eduaakar_V2Tests.debug.xcconfig"; path = "Target Support Files/Pods-eduaakar_V2-eduaakar_V2Tests/Pods-eduaakar_V2-eduaakar_V2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		FD07A420B109D9761B52872E /* Pods-eduaakar_V2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eduaakar_V2.debug.xcconfig"; path = "Target Support Files/Pods-eduaakar_V2/Pods-eduaakar_V2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +138,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		487F29F96B5A4415B0D8B1DE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				368E4DAE61504AF2902B68D4 /* SofiaProBlack.otf */,
+				57F58EBC734247BF99FE63CE /* SofiaProBlackItalic.otf */,
+				77366C872B594DCC877C0297 /* SofiaProBold.otf */,
+				3872EBEF86F74EF9B81A65D4 /* SofiaProBoldItalic.otf */,
+				092761566C8347D9AF2F53C6 /* SofiaProExtraLight.otf */,
+				B89983705EEB49C29CC69122 /* SofiaProExtraLightItalic.otf */,
+				4740B34B69D2404FA691A727 /* SofiaProLight.otf */,
+				EB5635E6DBA7441C86F27AE1 /* SofiaProLightItalic.otf */,
+				70F64FFF150C41A4B6A1F85F /* SofiaProMedium.otf */,
+				0D7F6FFA2E2A4A4194F51CE6 /* SofiaProMediumItalic.otf */,
+				42D1A0A7B318464F936DA75B /* SofiaProRegular.otf */,
+				92FD3BFD98E04F158F4EA2F9 /* SofiaProRegularItalic.otf */,
+				71897E0CCAD845939BFAF380 /* SofiaProSemiBold.otf */,
+				F7AFC2BF48724B3196D79961 /* SofiaProSemiBoldItalic.otf */,
+				6CA2907A21794B09B719BC39 /* SofiaProUltraLight.otf */,
+				2008D7E863584CB694094E2E /* SofiaProUltraLightItalic.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		4B52810C63DEED90EF701FF4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,7 +169,6 @@
 				F9C86F1766B1DA55847F0CF6 /* Pods-eduaakar_V2-eduaakar_V2Tests.debug.xcconfig */,
 				BA18CD2E96512139900E7713 /* Pods-eduaakar_V2-eduaakar_V2Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -134,6 +188,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				4B52810C63DEED90EF701FF4 /* Pods */,
+				487F29F96B5A4415B0D8B1DE /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -243,6 +298,22 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				325FDC8B0A104CF0B4FF3E42 /* SofiaProBlack.otf in Resources */,
+				1A970C254C974F458DA3B021 /* SofiaProBlackItalic.otf in Resources */,
+				7DBD12130EE74CFFB8DABCBA /* SofiaProBold.otf in Resources */,
+				1B61DEE94108482E8CD31268 /* SofiaProBoldItalic.otf in Resources */,
+				A18266394686411F8A9A843C /* SofiaProExtraLight.otf in Resources */,
+				42ED83137BC2483FBCF8E426 /* SofiaProExtraLightItalic.otf in Resources */,
+				04A498E269104826963E337C /* SofiaProLight.otf in Resources */,
+				4FEDB6633A8E4E3E8F6CCA58 /* SofiaProLightItalic.otf in Resources */,
+				D0D1D046856D41E98FDFC712 /* SofiaProMedium.otf in Resources */,
+				9CAE7BD07EB647C1B968EE83 /* SofiaProMediumItalic.otf in Resources */,
+				FFBBDB27050646B0A5D631F5 /* SofiaProRegular.otf in Resources */,
+				6F4570BD60944BFB8BE58FFF /* SofiaProRegularItalic.otf in Resources */,
+				7DCEDB0DB34E44AF9F94CC58 /* SofiaProSemiBold.otf in Resources */,
+				5B5014B5276745F8A08FD76D /* SofiaProSemiBoldItalic.otf in Resources */,
+				A87A0CF19C1D4FBFB034CE69 /* SofiaProUltraLight.otf in Resources */,
+				84F14CE21606467491C7052E /* SofiaProUltraLightItalic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +520,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = eduaakar_V2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -475,6 +547,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UL4Q6FXFSF;
 				INFOPLIST_FILE = eduaakar_V2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

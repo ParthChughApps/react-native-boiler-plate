@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, Button, StatusBar } from 'react-native';
 import { UserContext } from '../../contexts/user'
 
 export default function SignIn(props) {
@@ -8,6 +8,7 @@ export default function SignIn(props) {
 
   return (
     <View>
+      <StatusBar barStyle={'light-content'} backgroundColor="#25385d" />
       <Text>Sign In Screen</Text>
       <Text onPress={() => navigate('Home')}>Go to Home</Text>
       <Button

@@ -8,9 +8,7 @@
 
 import React from 'react';
 import {
-  SafeAreaView,
   StatusBar,
-  Text
 } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {IntroNavigator} from './src/navigation/IntroStack';
@@ -19,7 +17,7 @@ import {UserProvider} from './src/contexts/user'
 const App =  () => {
   return (
     <UserProvider>
-      <StatusBar barStyle={'dark-content'} />
+      <StatusBar barStyle={'dark-content'} backgroundColor="white" />
       <NavigationContainer>
         <IntroNavigator />
       </NavigationContainer>
