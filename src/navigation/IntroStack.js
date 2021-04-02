@@ -26,7 +26,7 @@ export const IntroNavigator = () => {
       />
       <IntroStackNavigator.Screen
         name="getStarted"
-        options={{ title: "Choose Login Type" }}
+        options={{ title: "Choose Login Type", headerShown: false }}
         component={Layout(GetStarted)}
       />
       <IntroStackNavigator.Screen

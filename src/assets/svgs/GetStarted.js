@@ -1,6 +1,6 @@
-import * as React from "react"
-import Svg, { Path, Circle } from "react-native-svg"
-import { Dimensions, View } from "react-native"
+import * as React from "react";
+import Svg, { Path, Circle } from "react-native-svg";
+import { Dimensions, View } from "react-native";
 
 /* SVGR has dropped some elements not supported by react-native-svg: title */
 
@@ -8,8 +8,6 @@ function SvgComponent(props) {
   const { width, height } = Dimensions.get('window');
   return (
     <View style={{ alignItems: 'center' }}>
-
-
       <Svg
         style={props.style}
         data-name="Layer 1"
