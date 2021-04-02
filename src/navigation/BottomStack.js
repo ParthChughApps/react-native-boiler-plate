@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {HomeNavigator} from './HomeStack';
+import {DrawerStack} from './DrawerStack';
 import {VideoStack} from './VideoStack';
 import {PDFNavigator} from './PDFStack';
 import {ExamStack} from './ExamStack';
@@ -21,7 +21,7 @@ export const BottomTabs = () => {
       }}>
       <Tab.Screen
         name="Home"
-        component={HomeNavigator}
+        component={DrawerStack}
         options={{
           tabBarLabel: 'Home',
         }}
