@@ -8,11 +8,11 @@ const Header = () => {
   return (
     <View style={styles.headerContainer}>
       <View style={styles.logoAndText}>
-        <View style={styles.imageContainer}>
+        <View>
           <Image assetName="logo" style={styles.image} />
         </View>
         <View style={styles.textContainer}>
-          <Text style={styles.titleText}>RENUKAI CHEMISTRY CLASSES</Text>
+          <Text style={styles.titleText}> RENUKAI CHEMISTRY CLASSES </Text>
         </View>
       </View>
       <Separator />
@@ -23,18 +23,15 @@ const Header = () => {
 const styles = StyleSheet.create({
   headerContainer: {
     flex: 1,
-    backgroundColor: 'peru',
+    paddingTop: 10,
+    paddingLeft: 10,
   },
   logoAndText: {
     flexDirection: 'row',
   },
-  imageContainer: {
-    marginTop: 15,
-    marginLeft: 19,
-  },
   image: {
-    height: 85,
-    width: 85,
+    height: 60,
+    width: 60,
   },
   textContainer: {
     flex: 1,

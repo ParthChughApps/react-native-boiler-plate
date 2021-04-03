@@ -1,16 +1,25 @@
-import React, { useContext, useState } from 'react';
-import { UserContext } from '../../contexts/user'
-import { StyleSheet, Dimensions } from 'react-native'
-import {View, Text, Colors, Button, TouchableOpacity} from 'react-native-ui-lib';
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
+import React, {useContext, useState} from 'react';
+import {UserContext} from '../../contexts/user';
+import {StyleSheet, Dimensions} from 'react-native';
+import {
+  View,
+  Text,
+  Colors,
+  Button,
+  TouchableOpacity,
+} from 'react-native-ui-lib';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
-import {GetStarted} from '../../assets/svgs'
-const height = Dimensions.get('window').height;
-export default function GetStartedView(props) {
-  const {navigation: {navigate}, route} = props;
+const GetStartedView = props => {
+  const {
+    navigation: {navigate},
+    route,
+  } = props;
+
   const [loginType, setLoginType] = useState('');
-  const { userDispatch } = useContext(UserContext)
+  const {userDispatch} = useContext(UserContext);
+
   const data = [
     {
       title: 'STUDENT',
@@ -32,7 +41,7 @@ export default function GetStartedView(props) {
     },
   ];
 
-  let CardDisplay = data.map((item, key) => {
+  const CardDisplay = data.map((item, key) => {
     return (
       <View>
         <TouchableOpacity
@@ -45,7 +54,6 @@ export default function GetStartedView(props) {
               item.title === loginType
                 ? {
                     flexDirection: 'row',
-                    width: '90.3%',
                     borderWidth: 1,
                     marginLeft: '6.3%',
                     marginTop: 25,
@@ -56,7 +64,6 @@ export default function GetStartedView(props) {
                   }
                 : {
                     flexDirection: 'row',
-                    width: '90.3%',
                     borderWidth: 1,
                     marginLeft: '6.3%',
                     marginTop: 25,
@@ -70,7 +77,7 @@ export default function GetStartedView(props) {
               <Image source={item.image} style={styles.image} />
             ) : (
               <View style={styles.demoUser}>
-                <Text style={styles.demoUserText}>D</Text>
+                <Text style={styles.demoUserText}>{item.text}</Text>
               </View>
             )}
 
@@ -78,37 +85,37 @@ export default function GetStartedView(props) {
               <Text style={styles.userTitle}>{item.title}</Text>
               <Text style={styles.userDecription}>{item.description}</Text>
             </View>
-            
           </View>
-          
         </TouchableOpacity>
       </View>
     );
   });
   return (
-    <View>
+    <View style={styles.container}>
       <Header />
-      {CardDisplay}
-      <View style={{marginTop: '8%'}}>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => {
-            userDispatch({type: "LOGIN_TYPE", payload: loginType})
-            navigate('authentication', {params: loginType})
-          }}>
-            
-          <Text style={styles.buttonText}>GET STARTED</Text>
-        </TouchableOpacity>
+      <View>
+        {CardDisplay}
+        <View style={{marginTop: '8%'}}>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => {
+              userDispatch({type: 'LOGIN_TYPE', payload: loginType});
+              navigate('authentication', {params: loginType});
+            }}>
+            <Text style={styles.buttonText}>GET STARTED</Text>
+          </TouchableOpacity>
+        </View>
       </View>
       <Footer />
     </View>
-  )
-}
+  );
+};
+
+export default GetStartedView;
 
 const styles = StyleSheet.create({
   container: {
-    height: height,
-    backgroundColor: 'white',
+    flex: 1,
     justifyContent: 'space-between',
   },
   header: {
@@ -127,13 +134,6 @@ const styles = StyleSheet.create({
     marginRight: 20.1,
     width: '61.8%',
     marginTop: '5.1%',
-  },
-  seprator: {
-    color: '#cbcbcb',
-    marginTop: 35.7,
-    marginLeft: 25.5,
-    marginRight: 19.5,
-    borderWidth: 0.3,
   },
   text: {
     marginTop: 20,
@@ -168,17 +168,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: 6.9,
   },
-  card: {
-    flexDirection: 'row',
-    width: '90.3%',
-    borderWidth: 1,
-    marginLeft: '6.3%',
-    marginTop: 48,
-    borderBottomWidth: 6,
-    borderBottomColor: '#3087d9',
-    borderRightWidth: 6,
-    borderRightColor: '#3087d9',
-  },
   cardText: {
     flex: 1,
     marginLeft: 12,
@@ -191,10 +180,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#3087d9',
   },
   buttonText: {
-    fontSize: 24.9,
+    fontSize: 25,
     fontFamily: 'SofiaProRegular',
     color: '#ffffff',
     alignSelf: 'center',
-    
   },
 });

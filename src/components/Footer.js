@@ -20,7 +20,6 @@ const Footer = () => {
 
 const styles = StyleSheet.create({
   footerContainer: {
-    backgroundColor: 'peru',
     marginVertical: 5,
     paddingBottom: 10,
   },
