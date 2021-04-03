@@ -54,12 +54,12 @@ const SignIn = ({navigation}) => {
       <View style={styles.container}>
         <View style={{marginTop: '2%'}} />
         <View style={styles.otp}>
-          <LottieView
+          {/* <LottieView
             source={require('../../../assets/lottie/20810-study-line.json')}
             autoPlay
             loop
             style={{height: 363, width: '88%'}}
-          />
+          /> */}
           <View style={{flexDirection: 'row', marginTop: '9.4%'}}>
             <TouchableOpacity
               onPress={() => {
