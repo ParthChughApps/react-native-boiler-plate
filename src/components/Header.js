@@ -4,19 +4,6 @@ import { StyleSheet } from 'react-native';
 import { View, Text, Image } from 'react-native-ui-lib';
 
 const Header = () => {
-  let Seperator = () => {
-    return (
-      <View
-        style={{
-          color: '#cbcbcb',
-          marginTop: 2,
-          marginLeft: 25.5,
-          marginRight: 19.5,
-          borderWidth: 0.2,
-        }}
-      />
-    );
-  };
   return (
     <View>
       <View style={styles.header}>
