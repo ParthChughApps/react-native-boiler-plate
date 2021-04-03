@@ -1,49 +1,50 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import { StyleSheet } from 'react-native';
-import { View, Text, Image } from 'react-native-ui-lib';
+import {StyleSheet} from 'react-native';
+import {View, Text, Image, Colors} from 'react-native-ui-lib';
+import Separator from './Separator';
 
 const Header = () => {
   return (
-    <View>
-      <View style={styles.header}>
-        <View style={styles.image}>
-          <Image assetName="logo" style={{height: 99, width: 99}}/>
+    <View style={styles.headerContainer}>
+      <View style={styles.logoAndText}>
+        <View style={styles.imageContainer}>
+          <Image assetName="logo" style={styles.image} />
         </View>
-        <View style={styles.headerText}>
-          <Text
-            style={{
-              fontSize: 20,
-              color: '#4d4d4d',
-              textAlign: 'center',
-              fontFamily: 'SofiaProRegular',
-            }}>
-            RENUKAI CHEMISTRY CLASSES
-          </Text>
+        <View style={styles.textContainer}>
+          <Text style={styles.titleText}>RENUKAI CHEMISTRY CLASSES</Text>
         </View>
       </View>
-      <Seperator />
+      <Separator />
     </View>
   );
 };
 const styles = StyleSheet.create({
-  header: {
+  headerContainer: {
+    flex: 1,
+    backgroundColor: 'peru',
+  },
+  logoAndText: {
     flexDirection: 'row',
   },
-  image: {
-    marginTop: '3.1%',
-    marginLeft: 18.9,
-    height: '11%',
-    width: '23.9%',
+  imageContainer: {
+    marginTop: 15,
+    marginLeft: 19,
   },
-  headerText: {
+  image: {
+    height: 85,
+    width: 85,
+  },
+  textContainer: {
     flex: 1,
-    marginLeft: 20.1,
-    marginRight: 20.1,
-    width: '61.8%',
-    marginTop: '6%',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  titleText: {
+    fontSize: 20,
+    color: Colors.darkGray,
+    textAlign: 'center',
+    fontFamily: 'SofiaProRegular',
   },
 });
 export default Header;
