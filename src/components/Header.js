@@ -19,6 +19,7 @@ const Header = () => {
     </View>
   );
 };
+
 const styles = StyleSheet.create({
   headerContainer: {
     flex: 1,
@@ -47,4 +48,5 @@ const styles = StyleSheet.create({
     fontFamily: 'SofiaProRegular',
   },
 });
+
 export default Header;
