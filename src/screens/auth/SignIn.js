@@ -10,10 +10,13 @@ import {
   Modal,
   Dimensions,
   TouchableOpacity,
+  ActivityIndicator,
 } from 'react-native';
 import LottieView from 'lottie-react-native';
 import Header from './../../components/Header';
 import Footer from './../../components/Footer';
+import useLogin from '../../hooks/useLogin';
+
 const height = Dimensions.get('window').height;
 const SignIn = ({navigation}) => {
   let [modal, setModal] = useState(false);
@@ -21,9 +24,21 @@ const SignIn = ({navigation}) => {
   let [parentMobile, setParentMobile] = useState('');
   let [requiredError, setError] = useState('');
   let [button, setButton] = useState(true);
+  const {loading, user, errors, login} = useLogin();
+
   const navigateToScreen = () => {
-    setModal(false);
-    
+    console.log('=================> checking login');
+    login(
+      {
+        rollNumber: '201',
+        parentMobile: '7588584810',
+      },
+      () => {
+        console.log('-------------------------------> SUCCESS');
+      },
+    );
+    // setModal(false);
+
     navigation.replace('Home');
   };
   const validation = async () => {
@@ -49,52 +64,11 @@ const SignIn = ({navigation}) => {
       setButton(false);
     }
   };
-  const OtpScreen = () => {
-    return (
-      <View style={styles.container}>
-        <View style={{marginTop: '2%'}} />
-        <View style={styles.otp}>
-          {/* <LottieView
-            source={require('../../../assets/lottie/20810-study-line.json')}
-            autoPlay
-            loop
-            style={{height: 363, width: '88%'}}
-          /> */}
-          <View style={{flexDirection: 'row', marginTop: '9.4%'}}>
-            <TouchableOpacity
-              onPress={() => {
-                setButton(true);
-                setModal(false);
-              }}>
-              
-            </TouchableOpacity>
-            <Text style={styles.verifyText}>PLEASE VERIFY OTP</Text>
-          </View>
-          
-          <View style={{flexDirection: 'row', marginTop: '16.3%'}}>
-            <Text style={styles.otpNotRecieved}>
-              Did not received OTP, on 7588584810
-            </Text>
-            <TouchableOpacity
-              style={{width: '36.7%', backgroundColor: '#bbcde5'}}>
-              <Text style={styles.resend}>RESEND</Text>
-            </TouchableOpacity>
-          </View>
-          <TouchableOpacity
-            style={styles.button}
-            onPress={() => navigateToScreen()}>
-            <Text style={styles.buttonText}>CONTINUE</Text>
-          </TouchableOpacity>
-          <Footer />
-        </View>
-      </View>
-    );
-  };
+
   return (
     <View style={styles.container}>
       <Header />
-      <View style={{alignItems: 'center', marginTop: -80}}>
-      </View>
+      <View style={{alignItems: 'center', marginTop: -80}} />
       <View>
         {!modal && (
           <View>
@@ -130,28 +104,17 @@ const SignIn = ({navigation}) => {
             {!!requiredError && (
               <Text style={styles.error}>{requiredError}</Text>
             )}
+            {loading && <ActivityIndicator size="large" color="#00ff00" />}
+            {errors && <Text> {errors}</Text>}
             <TouchableOpacity
               disabled={button}
               style={button ? styles.disabledButton : styles.button}
-              onPress={() => validation()}>
+              onPress={() => navigateToScreen()}>
               <Text style={styles.buttonText}>CONTINUE</Text>
             </TouchableOpacity>
             <Footer />
           </View>
         )}
-      </View>
-      <View>
-        <Modal
-          animationType="slide"
-          transparent={true}
-          visible={modal}
-          propagateSwipe={true}>
-          <ScrollView>
-            <View style={{marginTop: '110%'}}>
-              <OtpScreen />
-            </View>
-          </ScrollView>
-        </Modal>
       </View>
     </View>
   );
@@ -184,7 +147,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: '#000000',
     fontFamily: 'SofiaProRegular',
-    height: 50
+    height: 50,
   },
   button: {
     width: '90.3%',

@@ -1,7 +1,3 @@
-GET_STUDENT_INFO = `${BASE_URL}/get_students`
+import {BASE_URL} from './global.js';
 
-
-1. icons
-2. text
-3. package NativeModules
-4. gradle settings
+export const LOGIN_URL = `${BASE_URL}/api/v2/students/login`;

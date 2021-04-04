@@ -28,6 +28,7 @@ export const AuthNavigator = () => {
       <AuthStackNavigator.Screen
         name="signIn"
         component={Layout(SignIn)}
+        options={{headerShown: false}}
       />
       <AuthStackNavigator.Screen
         name="Home"
