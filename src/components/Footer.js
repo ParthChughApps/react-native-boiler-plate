@@ -22,6 +22,8 @@ const styles = StyleSheet.create({
   footerContainer: {
     marginVertical: 5,
     paddingBottom: 10,
+    paddingLeft: 12,
+    marginRight: 5,
   },
   separator: {
     marginTop: 5,

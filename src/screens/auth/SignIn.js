@@ -5,42 +5,44 @@ import {
   View,
   Text,
   StyleSheet,
-  ScrollView,
   TextInput,
-  Modal,
   Dimensions,
   TouchableOpacity,
   ActivityIndicator,
 } from 'react-native';
+import OTPInputView from '@twotalltotems/react-native-otp-input';
+import {Colors} from 'react-native-ui-lib';
 import LottieView from 'lottie-react-native';
+import Modal from 'react-native-modal';
+
 import Header from './../../components/Header';
 import Footer from './../../components/Footer';
 import useLogin from '../../hooks/useLogin';
 
-const height = Dimensions.get('window').height;
+const width = Dimensions.get('window').width;
 const SignIn = ({navigation}) => {
   let [modal, setModal] = useState(false);
   let [rollNumber, setRollNumber] = useState('');
   let [parentMobile, setParentMobile] = useState('');
   let [requiredError, setError] = useState('');
   let [button, setButton] = useState(true);
-  const {loading, user, errors, login} = useLogin();
+  const {loading, errors} = useLogin();
 
   const navigateToScreen = () => {
-    console.log('=================> checking login');
-    login(
-      {
-        rollNumber: '201',
-        parentMobile: '7588584810',
-      },
-      () => {
-        console.log('-------------------------------> SUCCESS');
-      },
-    );
-    // setModal(false);
-
+    setModal(false);
+    // console.log('=================> checking login');
+    // login(
+    //   {
+    //     rollNumber: '201',
+    //     parentMobile: '7588584810',
+    //   },
+    //   () => {
+    //     console.log('-------------------------------> SUCCESS');
+    //   },
+    // );
     navigation.replace('Home');
   };
+
   const validation = async () => {
     const reg = /^[0]?[6789]\d{9}$/;
     if (parentMobile.trim() === '' || rollNumber.trim() === '') {
@@ -51,11 +53,13 @@ const SignIn = ({navigation}) => {
       setModal(true);
     }
   };
+
   const required = async () => {
     if (parentMobile.trim() === '' || rollNumber.trim() === '') {
       setError('All Fields are Required.');
     }
   };
+
   const isValidate = async () => {
     await required();
     if (requiredError === '') {
@@ -68,135 +72,203 @@ const SignIn = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Header />
-      <View style={{alignItems: 'center', marginTop: -80}} />
+
+      <LottieView
+        source={require('../../assets/lottie/20810-study-line.json')}
+        autoPlay
+        loop
+        style={styles.lottieView}
+      />
+
       <View>
-        {!modal && (
-          <View>
-            <Text style={styles.description}>
-              Please login Using registered Roll number and parent mobile
-            </Text>
-            <View style={{marginTop: '7%'}} />
-            <View style={styles.textInput}>
-              <TextInput
-                placeholder="ROLL NUMBER"
-                keyboardType={'numeric'}
-                style={styles.textInputText}
-                onChangeText={rollNumber => {
-                  setRollNumber(rollNumber);
-                  isValidate();
-                }}
-              />
-            </View>
-            <View style={{marginTop: '4%'}} />
-            <View style={styles.textInput}>
-              <TextInput
-                placeholder="PARENT MOBILE"
-                maxLength={10}
-                keyboardType={'numeric'}
-                style={styles.textInputText}
-                onChangeText={parentMobile => {
-                  setParentMobile(parentMobile);
-                  isValidate();
-                }}
-              />
-            </View>
-            {/* VALIDATION */}
-            {!!requiredError && (
-              <Text style={styles.error}>{requiredError}</Text>
-            )}
-            {loading && <ActivityIndicator size="large" color="#00ff00" />}
-            {errors && <Text> {errors}</Text>}
-            <TouchableOpacity
-              disabled={button}
-              style={button ? styles.disabledButton : styles.button}
-              onPress={() => navigateToScreen()}>
-              <Text style={styles.buttonText}>CONTINUE</Text>
-            </TouchableOpacity>
-            <Footer />
-          </View>
-        )}
+        <Text style={styles.description}>
+          Please login Using registered Roll number and parent mobile
+        </Text>
+
+        <View style={styles.textInput}>
+          <TextInput
+            placeholder="ROLL NUMBER"
+            keyboardType={'numeric'}
+            style={styles.textInputText}
+            onChangeText={rollNumber => {
+              setRollNumber(rollNumber);
+              isValidate();
+            }}
+          />
+        </View>
+
+        <View style={styles.textInput}>
+          <TextInput
+            placeholder="PARENT MOBILE"
+            maxLength={10}
+            keyboardType={'numeric'}
+            style={styles.textInputText}
+            onChangeText={parentMobile => {
+              setParentMobile(parentMobile);
+              isValidate();
+            }}
+          />
+        </View>
+
+        {/* VALIDATION */}
+        {!!requiredError && <Text style={styles.error}>{requiredError}</Text>}
+        {loading && <ActivityIndicator size="large" color="#00ff00" />}
+        {errors && <Text> {errors}</Text>}
+
+        <TouchableOpacity
+          disabled={button}
+          style={button ? styles.disabledButton : styles.button}
+          onPress={() => validation()}>
+          <Text style={styles.buttonText}>CONTINUE</Text>
+        </TouchableOpacity>
+
+        <Footer />
       </View>
+
+      {/* MODAL VIEW */}
+
+      <Modal
+        isVisible={modal}
+        animationInTiming={1000}
+        onBackButtonPress={() => setModal(false)}
+        style={styles.otpView}>
+        <View>
+          <Text style={styles.verifyText}>PLEASE VERIFY OTP</Text>
+
+          <OTPInputView
+            style={styles.otpTextInput}
+            pinCount={6}
+            autoFocusOnLoad
+            codeInputFieldStyle={styles.underlineStyleBase}
+            codeInputHighlightStyle={styles.underlineStyleHighLighted}
+            onCodeFilled={code => {
+              console.log(`Code is ${code}, you are good to go!`);
+            }}
+          />
+          <View style={styles.textAndResend}>
+            <Text style={styles.otpNotRecieved}>
+              Did not received OTP, on 7588584810
+            </Text>
+            <TouchableOpacity style={styles.resendButton}>
+              <Text style={styles.resendText}>RESEND</Text>
+            </TouchableOpacity>
+          </View>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => navigateToScreen()}>
+            <Text style={styles.buttonText}>CONTINUE</Text>
+          </TouchableOpacity>
+        </View>
+      </Modal>
     </View>
   );
 };
+
 const styles = StyleSheet.create({
   container: {
-    height: height,
+    flex: 1,
     backgroundColor: 'white',
     justifyContent: 'space-between',
   },
+  lottieView: {
+    width: '88%',
+    alignSelf: 'center',
+    marginTop: -20,
+  },
   description: {
-    width: '75.8%',
-    marginTop: -80,
-    marginLeft: '9.7%',
-    marginRight: '14.5%',
+    marginLeft: '12%',
+    marginRight: '12%',
     fontSize: 17,
-    color: '#4d4d4d',
+    color: Colors.darkGray,
     fontFamily: 'SofiaProRegular',
     textAlign: 'center',
   },
   textInput: {
-    width: '88.4%',
-    marginRight: '5.6%',
-    marginLeft: '7%',
+    width: '95%',
+    marginLeft: '3%',
+    marginTop: 20,
     borderWidth: 0.9,
-    borderColor: '#707070',
+    borderColor: Colors.darkGray,
   },
   textInputText: {
-    marginLeft: '4.4%',
+    marginLeft: '5%',
     fontSize: 18,
-    color: '#000000',
+    color: Colors.darkGray,
     fontFamily: 'SofiaProRegular',
     height: 50,
   },
+  error: {
+    color: 'red',
+    width: 250,
+    marginLeft: 20,
+    marginTop: 8,
+    fontWeight: '400',
+    fontSize: 15,
+  },
   button: {
-    width: '90.3%',
-    marginLeft: '6.3%',
+    width: '95%',
+    marginLeft: '3%',
     marginTop: '8%',
     padding: 8,
-    backgroundColor: '#3087d9',
+    backgroundColor: Colors.skyBlue,
   },
   disabledButton: {
-    width: '90.3%',
-    marginLeft: '6.3%',
+    width: '95%',
+    marginLeft: '3%',
     marginTop: '8%',
     padding: 8,
-    backgroundColor: '#bbcde5',
+    backgroundColor: Colors.lightSkyBlue,
   },
   buttonText: {
     fontSize: 24.9,
     fontFamily: 'SofiaProRegular',
-    color: '#ffffff',
+    color: Colors.white,
     alignSelf: 'center',
   },
-  otp: {
-    width: '100%',
-    padding: 4,
-    borderColor: '#9d9d9d',
+  otpView: {
+    width: width,
+    marginLeft: 0,
+    height: '45%',
+    position: 'absolute',
+    bottom: -20,
+    backgroundColor: Colors.white,
+    borderColor: Colors.gray,
     borderWidth: 3,
     borderTopRightRadius: 20,
     borderTopLeftRadius: 20,
   },
   verifyText: {
-    color: '#4d4d4d',
+    color: Colors.darkGray,
     fontSize: 18,
     fontFamily: 'SofiaProRegular',
     textAlign: 'center',
-    marginLeft: 25,
   },
-  otpView: {
-    width: '80%',
-    height: '2.3%',
-    marginTop: '15.6%',
-    marginLeft: '10%',
+  textAndResend: {
+    flexDirection: 'row',
+    marginTop: '16%',
   },
   otpNotRecieved: {
-    color: '#4d4d4d',
+    color: Colors.darkGray,
     fontSize: 15.9,
-    width: '55.6%',
-    marginLeft: '2.9%',
+    width: '55%',
+    marginLeft: '3%',
     fontFamily: 'SofiaProRegular',
     textAlign: 'center',
+  },
+  resendButton: {
+    width: '36%',
+    backgroundColor: Colors.lightSkyBlue,
+  },
+  resendText: {
+    alignSelf: 'center',
+    marginTop: 10,
+    color: Colors.white,
+  },
+  otpTextInput: {
+    width: '80%',
+    height: '3%',
+    marginTop: '15%',
+    marginLeft: '10%',
   },
   borderStyleBase: {
     width: 30,
@@ -213,19 +285,6 @@ const styles = StyleSheet.create({
   },
   underlineStyleHighLighted: {
     borderColor: 'black',
-  },
-  resend: {
-    alignSelf: 'center',
-    marginTop: 10,
-    color: '#ffffff',
-  },
-  error: {
-    color: 'red',
-    width: 250,
-    marginLeft: 40,
-    marginTop: 8,
-    fontWeight: '400',
-    fontSize: 15,
   },
 });
 export default SignIn;

@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react-native/no-inline-styles */
 import React, {useContext, useState} from 'react';
 import {UserContext} from '../../contexts/user';
 import {StyleSheet, Dimensions} from 'react-native';
@@ -6,6 +8,7 @@ import {
   Text,
   Colors,
   Button,
+  Image,
   TouchableOpacity,
 } from 'react-native-ui-lib';
 import Header from '../../components/Header';
@@ -55,7 +58,7 @@ const GetStartedView = props => {
                 ? {
                     flexDirection: 'row',
                     borderWidth: 1,
-                    marginLeft: '6.3%',
+                    marginLeft: '3%',
                     marginTop: 25,
                     borderTopWidth: 6,
                     borderTopColor: Colors.baseColor,
@@ -65,7 +68,7 @@ const GetStartedView = props => {
                 : {
                     flexDirection: 'row',
                     borderWidth: 1,
-                    marginLeft: '6.3%',
+                    marginLeft: '3%',
                     marginTop: 25,
                     borderBottomWidth: 6,
                     borderBottomColor: item.borderColor,
@@ -76,12 +79,10 @@ const GetStartedView = props => {
             {item.image ? (
               <Image source={item.image} style={styles.image} />
             ) : (
-              <View style={styles.demoUser}>
-                <Text style={styles.demoUserText}>{item.text}</Text>
-              </View>
+              <Text style={styles.capitalText}>{item.text}</Text>
             )}
 
-            <View style={styles.cardText}>
+            <View style={styles.cardTextContainer}>
               <Text style={styles.userTitle}>{item.title}</Text>
               <Text style={styles.userDecription}>{item.description}</Text>
             </View>
@@ -90,23 +91,29 @@ const GetStartedView = props => {
       </View>
     );
   });
+
   return (
     <View style={styles.container}>
-      <Header />
       <View>
-        {CardDisplay}
-        <View style={{marginTop: '8%'}}>
-          <TouchableOpacity
-            style={styles.button}
-            onPress={() => {
-              userDispatch({type: 'LOGIN_TYPE', payload: loginType});
-              navigate('authentication', {params: loginType});
-            }}>
-            <Text style={styles.buttonText}>GET STARTED</Text>
-          </TouchableOpacity>
-        </View>
+        <Header />
       </View>
-      <Footer />
+      <View>
+        <Text style={styles.iAmA}> I Am A </Text>
+        {CardDisplay}
+
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => {
+            userDispatch({type: 'LOGIN_TYPE', payload: loginType});
+            navigate('authentication', {params: loginType});
+          }}>
+          <Text style={styles.buttonText}>GET STARTED</Text>
+        </TouchableOpacity>
+      </View>
+
+      <View>
+        <Footer />
+      </View>
     </View>
   );
 };
@@ -118,71 +125,55 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
   },
-  header: {
-    flexDirection: 'row',
+  iAmA: {
+    alignSelf: 'center',
+    color: Colors.darkGray,
+    fontSize: 16,
+    fontFamily: 'SofiaProRegular',
   },
   image: {
     height: 78,
     width: 78,
     marginTop: 6,
     marginLeft: 3,
-    marginBottom: 6.9,
+    marginBottom: 7,
   },
-  headerText: {
-    flex: 1,
-    marginLeft: 20.1,
-    marginRight: 20.1,
-    width: '61.8%',
-    marginTop: '5.1%',
-  },
-  text: {
-    marginTop: 20,
-    alignSelf: 'center',
-    color: '#4d4d4d',
-    fontSize: 16,
-    fontFamily: 'SofiaProRegular',
-  },
-  userTitle: {
-    color: '#4d4d4d',
-    fontSize: 22,
-    fontFamily: 'SofiaProRegular',
-  },
-  userDecription: {
-    color: '#4d4d4d',
-    fontSize: 12.9,
-    marginTop: 8.1,
-    fontFamily: 'SofiaProRegular',
-  },
-  demoUser: {
-    height: 78,
-    width: 78,
-    marginTop: 6,
-    marginLeft: 3,
-    marginBottom: 6.9,
-  },
-  demoUserText: {
+  capitalText: {
+    height: 75,
+    width: 75,
     fontSize: 48,
-    color: '#4d4d4d',
-    marginTop: 6,
-    marginLeft: 3,
+    color: Colors.darkGray,
+    marginTop: 12,
     textAlign: 'center',
-    marginBottom: 6.9,
+    marginBottom: 7,
   },
-  cardText: {
+  cardTextContainer: {
     flex: 1,
     marginLeft: 12,
     alignSelf: 'center',
   },
+  userTitle: {
+    color: Colors.darkGray,
+    fontSize: 22,
+    fontFamily: 'SofiaProRegular',
+  },
+  userDecription: {
+    color: Colors.darkGray,
+    fontSize: 13,
+    marginTop: 8,
+    fontFamily: 'SofiaProRegular',
+  },
   button: {
-    width: '90.3%',
-    marginLeft: '6.3%',
+    width: '100%',
+    marginLeft: '3%',
+    marginTop: 30,
     padding: 8,
-    backgroundColor: '#3087d9',
+    backgroundColor: Colors.skyBlue,
   },
   buttonText: {
     fontSize: 25,
     fontFamily: 'SofiaProRegular',
-    color: '#ffffff',
+    color: Colors.white,
     alignSelf: 'center',
   },
 });
