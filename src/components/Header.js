@@ -24,7 +24,6 @@ const styles = StyleSheet.create({
   headerContainer: {
     flex: 1,
     paddingTop: 10,
-    paddingLeft: 10,
   },
   logoAndText: {
     flexDirection: 'row',

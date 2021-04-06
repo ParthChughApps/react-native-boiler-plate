@@ -1,6 +1,7 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable no-shadow */
 /* eslint-disable react-native/no-inline-styles */
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   View,
   Text,
@@ -9,9 +10,10 @@ import {
   Dimensions,
   TouchableOpacity,
   ActivityIndicator,
+  KeyboardAvoidingView,
 } from 'react-native';
 import OTPInputView from '@twotalltotems/react-native-otp-input';
-import {Colors} from 'react-native-ui-lib';
+import { Colors } from 'react-native-ui-lib';
 import LottieView from 'lottie-react-native';
 import Modal from 'react-native-modal';
 
@@ -20,13 +22,13 @@ import Footer from './../../components/Footer';
 import useLogin from '../../hooks/useLogin';
 
 const width = Dimensions.get('window').width;
-const SignIn = ({navigation}) => {
+const SignIn = ({ navigation }) => {
   let [modal, setModal] = useState(false);
   let [rollNumber, setRollNumber] = useState('');
   let [parentMobile, setParentMobile] = useState('');
   let [requiredError, setError] = useState('');
   let [button, setButton] = useState(true);
-  const {loading, errors} = useLogin();
+  const {loading, user, errors, login} = useLogin();
 
   const navigateToScreen = () => {
     setModal(false);
@@ -69,8 +71,48 @@ const SignIn = ({navigation}) => {
     }
   };
 
+  const ModalView = () => {
+    return (
+      <>
+        <Modal
+          isVisible={modal}
+          animationInTiming={1000}
+          onBackButtonPress={() => setModal(false)}
+          style={styles.otpView}>
+          <View>
+            <Text style={styles.verifyText}>PLEASE VERIFY OTP</Text>
+
+            <OTPInputView
+              style={styles.otpTextInput}
+              pinCount={6}
+              autoFocusOnLoad
+              codeInputFieldStyle={styles.underlineStyleBase}
+              codeInputHighlightStyle={styles.underlineStyleHighLighted}
+              onCodeFilled={code => {
+                console.log(`Code is ${code}, you are good to go!`);
+              }}
+            />
+            <View style={styles.textAndResend}>
+              <Text style={styles.otpNotRecieved}>
+                Did not received OTP, on 7588584810
+              </Text>
+              <TouchableOpacity style={styles.resendButton}>
+                <Text style={styles.resendText}>RESEND</Text>
+              </TouchableOpacity>
+            </View>
+            <TouchableOpacity
+              style={styles.modalButton}
+              onPress={() => navigateToScreen()}>
+              <Text style={styles.buttonText}>CONTINUE</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
+      </>
+    );
+  };
+
   return (
-    <View style={styles.container}>
+    <KeyboardAvoidingView style={styles.container}>
       <Header />
 
       <LottieView
@@ -121,46 +163,13 @@ const SignIn = ({navigation}) => {
           onPress={() => validation()}>
           <Text style={styles.buttonText}>CONTINUE</Text>
         </TouchableOpacity>
-
-        <Footer />
       </View>
 
+      <Footer />
+
       {/* MODAL VIEW */}
-
-      <Modal
-        isVisible={modal}
-        animationInTiming={1000}
-        onBackButtonPress={() => setModal(false)}
-        style={styles.otpView}>
-        <View>
-          <Text style={styles.verifyText}>PLEASE VERIFY OTP</Text>
-
-          <OTPInputView
-            style={styles.otpTextInput}
-            pinCount={6}
-            autoFocusOnLoad
-            codeInputFieldStyle={styles.underlineStyleBase}
-            codeInputHighlightStyle={styles.underlineStyleHighLighted}
-            onCodeFilled={code => {
-              console.log(`Code is ${code}, you are good to go!`);
-            }}
-          />
-          <View style={styles.textAndResend}>
-            <Text style={styles.otpNotRecieved}>
-              Did not received OTP, on 7588584810
-            </Text>
-            <TouchableOpacity style={styles.resendButton}>
-              <Text style={styles.resendText}>RESEND</Text>
-            </TouchableOpacity>
-          </View>
-          <TouchableOpacity
-            style={styles.button}
-            onPress={() => navigateToScreen()}>
-            <Text style={styles.buttonText}>CONTINUE</Text>
-          </TouchableOpacity>
-        </View>
-      </Modal>
-    </View>
+      <ModalView />
+    </KeyboardAvoidingView>
   );
 };
 
@@ -176,16 +185,12 @@ const styles = StyleSheet.create({
     marginTop: -20,
   },
   description: {
-    marginLeft: '12%',
-    marginRight: '12%',
     fontSize: 17,
     color: Colors.darkGray,
     fontFamily: 'SofiaProRegular',
     textAlign: 'center',
   },
   textInput: {
-    width: '95%',
-    marginLeft: '3%',
     marginTop: 20,
     borderWidth: 0.9,
     borderColor: Colors.darkGray,
@@ -206,21 +211,23 @@ const styles = StyleSheet.create({
     fontSize: 15,
   },
   button: {
-    width: '95%',
-    marginLeft: '3%',
     marginTop: '8%',
     padding: 8,
     backgroundColor: Colors.skyBlue,
   },
+  modalButton: {
+    marginTop: '8%',
+    padding: 8,
+    marginHorizontal: 6,
+    backgroundColor: Colors.skyBlue,
+  },
   disabledButton: {
-    width: '95%',
-    marginLeft: '3%',
     marginTop: '8%',
     padding: 8,
     backgroundColor: Colors.lightSkyBlue,
   },
   buttonText: {
-    fontSize: 24.9,
+    fontSize: 25,
     fontFamily: 'SofiaProRegular',
     color: Colors.white,
     alignSelf: 'center',
@@ -249,9 +256,8 @@ const styles = StyleSheet.create({
   },
   otpNotRecieved: {
     color: Colors.darkGray,
-    fontSize: 15.9,
+    fontSize: 16,
     width: '55%',
-    marginLeft: '3%',
     fontFamily: 'SofiaProRegular',
     textAlign: 'center',
   },
@@ -268,7 +274,7 @@ const styles = StyleSheet.create({
     width: '80%',
     height: '3%',
     marginTop: '15%',
-    marginLeft: '10%',
+    alignSelf: 'center',
   },
   borderStyleBase: {
     width: 30,
@@ -287,4 +293,5 @@ const styles = StyleSheet.create({
     borderColor: 'black',
   },
 });
+
 export default SignIn;

@@ -19,7 +19,7 @@ const GetStartedView = props => {
     navigation: {navigate},
     route,
   } = props;
-
+  let [button, setButton] = useState(true);
   const [loginType, setLoginType] = useState('');
   const {userDispatch} = useContext(UserContext);
 
@@ -50,15 +50,16 @@ const GetStartedView = props => {
         <TouchableOpacity
           key={key}
           onPress={() => {
+            setButton(false);
             setLoginType(item.title);
           }}>
           <View
             style={
               item.title === loginType
                 ? {
+                    flex: 1,
                     flexDirection: 'row',
                     borderWidth: 1,
-                    marginLeft: '3%',
                     marginTop: 25,
                     borderTopWidth: 6,
                     borderTopColor: Colors.baseColor,
@@ -66,9 +67,9 @@ const GetStartedView = props => {
                     borderLeftColor: Colors.baseColor,
                   }
                 : {
+                    flex: 1,
                     flexDirection: 'row',
                     borderWidth: 1,
-                    marginLeft: '3%',
                     marginTop: 25,
                     borderBottomWidth: 6,
                     borderBottomColor: item.borderColor,
@@ -77,9 +78,13 @@ const GetStartedView = props => {
                   }
             }>
             {item.image ? (
-              <Image source={item.image} style={styles.image} />
+              <View>
+                <Image source={item.image} style={styles.image} />
+              </View>
             ) : (
-              <Text style={styles.capitalText}>{item.text}</Text>
+              <View>
+                <Text style={styles.capitalText}>{item.text}</Text>
+              </View>
             )}
 
             <View style={styles.cardTextContainer}>
@@ -102,7 +107,8 @@ const GetStartedView = props => {
         {CardDisplay}
 
         <TouchableOpacity
-          style={styles.button}
+          disabled={button}
+          style={button ? styles.disabledButton : styles.button}
           onPress={() => {
             userDispatch({type: 'LOGIN_TYPE', payload: loginType});
             navigate('authentication', {params: loginType});
@@ -143,7 +149,6 @@ const styles = StyleSheet.create({
     width: 75,
     fontSize: 48,
     color: Colors.darkGray,
-    marginTop: 12,
     textAlign: 'center',
     marginBottom: 7,
   },
@@ -164,11 +169,14 @@ const styles = StyleSheet.create({
     fontFamily: 'SofiaProRegular',
   },
   button: {
-    width: '100%',
-    marginLeft: '3%',
     marginTop: 30,
     padding: 8,
     backgroundColor: Colors.skyBlue,
+  },
+  disabledButton: {
+    marginTop: 30,
+    padding: 8,
+    backgroundColor: Colors.lightSkyBlue,
   },
   buttonText: {
     fontSize: 25,
