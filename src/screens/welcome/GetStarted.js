@@ -89,7 +89,7 @@ const GetStartedView = props => {
 
             <View style={styles.cardTextContainer}>
               <Text style={styles.userTitle}>{item.title}</Text>
-              <Text style={styles.userDecription}>{item.description}</Text>
+              <Text style={styles.userDescription}>{item.description}</Text>
             </View>
           </View>
         </TouchableOpacity>
@@ -123,8 +123,6 @@ const GetStartedView = props => {
     </View>
   );
 };
-
-export default GetStartedView;
 
 const styles = StyleSheet.create({
   container: {
@@ -162,7 +160,7 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontFamily: 'SofiaProRegular',
   },
-  userDecription: {
+  userDescription: {
     color: Colors.darkGray,
     fontSize: 13,
     marginTop: 8,
@@ -185,3 +183,5 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
 });
+
+export default GetStartedView;

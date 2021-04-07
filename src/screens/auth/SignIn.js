@@ -93,7 +93,7 @@ const SignIn = ({ navigation }) => {
               }}
             />
             <View style={styles.textAndResend}>
-              <Text style={styles.otpNotRecieved}>
+              <Text style={styles.otpNotReceived}>
                 Did not received OTP, on 7588584810
               </Text>
               <TouchableOpacity style={styles.resendButton}>
@@ -126,7 +126,6 @@ const SignIn = ({ navigation }) => {
         <Text style={styles.description}>
           Please login Using registered Roll number and parent mobile
         </Text>
-
         <View style={styles.textInput}>
           <TextInput
             placeholder="ROLL NUMBER"
@@ -138,7 +137,6 @@ const SignIn = ({ navigation }) => {
             }}
           />
         </View>
-
         <View style={styles.textInput}>
           <TextInput
             placeholder="PARENT MOBILE"
@@ -254,7 +252,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginTop: '16%',
   },
-  otpNotRecieved: {
+  otpNotReceived: {
     color: Colors.darkGray,
     fontSize: 16,
     width: '55%',
