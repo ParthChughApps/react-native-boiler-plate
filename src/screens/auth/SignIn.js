@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable no-shadow */
 /* eslint-disable react-native/no-inline-styles */
-import React, { useState } from 'react';
+import React, { useState, createRef } from 'react';
 import {
   View,
   Text,
@@ -11,6 +11,7 @@ import {
   TouchableOpacity,
   ActivityIndicator,
   KeyboardAvoidingView,
+  Keyboard,
 } from 'react-native';
 import OTPInputView from '@twotalltotems/react-native-otp-input';
 import { Colors } from 'react-native-ui-lib';
@@ -28,6 +29,8 @@ const SignIn = ({ navigation }) => {
   let [parentMobile, setParentMobile] = useState('');
   let [requiredError, setError] = useState('');
   let [button, setButton] = useState(true);
+  const rollNumberRef = createRef();
+  const parentMobileRef = createRef();
   const {loading, user, errors, login} = useLogin();
 
   const navigateToScreen = () => {
@@ -112,7 +115,7 @@ const SignIn = ({ navigation }) => {
   };
 
   return (
-    <KeyboardAvoidingView style={styles.container}>
+    <View style={styles.container}>
       <Header />
 
       <LottieView
@@ -126,15 +129,22 @@ const SignIn = ({ navigation }) => {
         <Text style={styles.description}>
           Please login Using registered Roll number and parent mobile
         </Text>
+        <KeyboardAvoidingView enabled>
         <View style={styles.textInput}>
           <TextInput
             placeholder="ROLL NUMBER"
             keyboardType={'numeric'}
             style={styles.textInputText}
+            ref={rollNumberRef}
             onChangeText={rollNumber => {
               setRollNumber(rollNumber);
               isValidate();
             }}
+            onSubmitEditing={() =>
+              parentMobileRef.current &&
+              parentMobileRef.current.focus()
+            }
+            blurOnSubmit={false}
           />
         </View>
         <View style={styles.textInput}>
@@ -142,13 +152,17 @@ const SignIn = ({ navigation }) => {
             placeholder="PARENT MOBILE"
             maxLength={10}
             keyboardType={'numeric'}
+            ref={parentMobileRef}
             style={styles.textInputText}
             onChangeText={parentMobile => {
               setParentMobile(parentMobile);
               isValidate();
             }}
+            onSubmitEditing={Keyboard.dismiss}
+                  blurOnSubmit={false}
           />
         </View>
+        </KeyboardAvoidingView>
 
         {/* VALIDATION */}
         {!!requiredError && <Text style={styles.error}>{requiredError}</Text>}
@@ -167,7 +181,7 @@ const SignIn = ({ navigation }) => {
 
       {/* MODAL VIEW */}
       <ModalView />
-    </KeyboardAvoidingView>
+    </View>
   );
 };
 

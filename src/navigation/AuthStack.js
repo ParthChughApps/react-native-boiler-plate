@@ -4,6 +4,7 @@ import {
   createStackNavigator,
 } from '@react-navigation/stack';
 import SignIn from '../screens/auth/SignIn';
+import DemoSignIn from '../screens/auth/DemoSignIn';
 import {BottomTabs} from './BottomStack'
 import {Layout} from '../screens/Layout'
 
@@ -28,6 +29,11 @@ export const AuthNavigator = () => {
       <AuthStackNavigator.Screen
         name="signIn"
         component={Layout(SignIn)}
+        options={{headerShown: false}}
+      />
+      <AuthStackNavigator.Screen
+        name="DemoSignIn"
+        component={Layout(DemoSignIn)}
         options={{headerShown: false}}
       />
       <AuthStackNavigator.Screen

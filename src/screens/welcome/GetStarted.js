@@ -23,6 +23,14 @@ const GetStartedView = props => {
   const [loginType, setLoginType] = useState('');
   const {userDispatch} = useContext(UserContext);
 
+  const navigateToScreen = () => {
+    userDispatch({type: 'LOGIN_TYPE', payload: loginType});
+    if (loginType === 'DEMO USER') {
+      navigate('authentication', {screen: 'DemoSignIn'});
+    } else {
+      navigate('authentication', {params: loginType});
+    }
+  };
   const data = [
     {
       title: 'STUDENT',
@@ -110,8 +118,7 @@ const GetStartedView = props => {
           disabled={button}
           style={button ? styles.disabledButton : styles.button}
           onPress={() => {
-            userDispatch({type: 'LOGIN_TYPE', payload: loginType});
-            navigate('authentication', {params: loginType});
+            navigateToScreen();
           }}>
           <Text style={styles.buttonText}>GET STARTED</Text>
         </TouchableOpacity>
