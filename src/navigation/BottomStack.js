@@ -1,21 +1,39 @@
 import React from 'react';
 import {StyleSheet} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import {Colors} from 'react-native-ui-lib';
 import {DrawerStack} from './DrawerStack';
 import {VideoStack} from './VideoStack';
 import {PDFNavigator} from './PDFStack';
 import {ExamStack} from './ExamStack';
 import {ProfileNavigator} from './ProfileStack';
 
-
 const Tab = createBottomTabNavigator();
 
 export const BottomTabs = () => {
   return (
     <Tab.Navigator
+      screenOptions={({route}) => ({
+        tabBarIcon: ({focused, color, size}) => {
+          let iconName;
+          if (route.name === 'Home') {
+            iconName = 'home';
+          } else if (route.name === 'Videos') {
+            iconName = 'videocamera';
+          } else if (route.name === 'PDF') {
+            iconName = 'pdffile1';
+          } else if (route.name === 'Exam') {
+            iconName = 'book';
+          } else if (route.name === 'Me') {
+            iconName = 'user';
+          }
+          return <AntDesign name={iconName} size={21} color={color} />;
+        },
+      })}
       tabBarOptions={{
         labelStyle: footerTabstyles.footerHref,
-        inactiveTintColor: '#000000',
+        activeTintColor: Colors.skyBlue,
         tabStyle: {paddingVertical: 10},
         style: {height: 60},
       }}>
@@ -62,10 +80,10 @@ export const BottomTabs = () => {
 };
 const footerTabstyles = StyleSheet.create({
   footerHref: {
-    fontSize: 9,
-    color: '#000',
-    fontWeight: '600',
+    fontSize: 11,
+    marginTop: 2,
     textTransform: 'uppercase',
+    fontFamily: 'SofiaProRegular',
   },
   footerIconImg: {
     marginVertical: 0,

@@ -1,10 +1,19 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 
-export default function Videos() {
+export default function Video() {
   return (
-    <View>
-      <Text>Videos Screen</Text>
+    <View style={styles.container}>
+      <Text>Video Screen</Text>
     </View>
-  )
+  );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'white',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});

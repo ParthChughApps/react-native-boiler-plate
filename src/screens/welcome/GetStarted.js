@@ -135,6 +135,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'space-between',
+    marginHorizontal: 10,
   },
   iAmA: {
     alignSelf: 'center',

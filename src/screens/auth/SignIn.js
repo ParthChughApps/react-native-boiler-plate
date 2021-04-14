@@ -190,6 +190,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'white',
     justifyContent: 'space-between',
+    marginHorizontal: 10,
   },
   lottieView: {
     width: '88%',
