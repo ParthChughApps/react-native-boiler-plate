@@ -1,32 +1,24 @@
 /* eslint-disable no-shadow */
 /* eslint-disable react-native/no-inline-styles */
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
   StyleSheet,
-  Image,
-  FlatList,
-  Dimensions,
   TextInput,
   TouchableOpacity,
-  Button,
   ImageBackground,
 } from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {Colors} from 'react-native-ui-lib';
 
 import Separator from '../../../components/Separator';
 
-const width = Dimensions.get('window').width;
-
 const Notification = ({navigation}) => {
   const [isVisible, setVisible] = useState(false);
   let [selectedFilters, setSelectedFilters] = useState([]);
 
-  // let selectedFilters =[];
   const filters = [
     'Admin',
     'New exam',
@@ -40,60 +32,56 @@ const Notification = ({navigation}) => {
 
   const notifications = [
     {
-      date: '18 JAN 9.30 PM',
+      date: '18',
+      month: 'JAN',
+      time: '9.30 PM',
       title: 'No Class on 19 Jan 2021',
       attachment: true,
       seen: true,
       seenTime: '10.50 PM. 20 Jan 2021',
+      image: 'https://avatars2.githubusercontent.com/u/7970947?v=3&s=460',
+      pdf: '',
       data:
         'Dear Students, please note that there Will be no class on 19th Jan 2021Dear Students, please note that there Will be no class on 19th Jan 2021Dear Students, please note that there Will be no class on 19th Jan 2021Dear Students, please note that there Will be no class on 19th Jan 2021Dear Students, please note that there Will be no class on 19th Jan 2021',
     },
     {
-      date: '18 JAN 9.30 PM',
+      date: '18',
+      month: 'JAN',
+      time: '9.30 PM',
       title:
         'No Class on 19 Jan 2021No Class on 19 Jan 2021No Class on 19 Jan 2021No Class on 19 Jan 2021',
       attachment: true,
       seen: false,
       seenTime: '',
+      image: '',
+      pdf: 'https://reactnative.dev/',
       data:
-        'Dear Students, please note that there Will be no class on 19th Jan 2021',
+        'Dear Students, please note that there Will be no class on 19th Jan 2021Dear Students, please note that there Will be no class on 19th Jan 2021Dear Students, please note that there Will be no class on 19th Jan 2021Dear Students, please note that there Will be no class on 19th Jan 2021Dear Students, please note that there Will be no class on 19th Jan 2021',
     },
     {
-      date: '18 JAN 9.30 PM',
+      date: '18',
+      month: 'JAN',
+      time: '9.30 PM',
       title: 'No Class on 19 Jan 2021',
       attachment: true,
       seen: true,
       seenTime: '10.50 PM. 20 Jan 2021',
+      image: 'https://avatars2.githubusercontent.com/u/7970947?v=3&s=460',
+      pdf: '',
       data:
-        'Dear Students, please note that there Will be no class on 19th Jan 2021',
+        'Dear Students, please note that there Will be no class on 19th Jan 2021Dear Students, please note that there Will be no class on 19th Jan 2021Dear Students, please note that there Will be no class on 19th Jan 2021Dear Students, please note that there Will be no class on 19th Jan 2021Dear Students, please note that there Will be no class on 19th Jan 2021',
     },
     {
-      date: '18 JAN 9.30 PM',
+      date: '18',
+      month: 'JAN',
+      time: '9.30 PM',
       title:
         'No Class on 19 Jan 2021No Class on 19 Jan 2021No Class on 19 Jan 2021No Class on 19 Jan 2021',
       attachment: true,
       seen: false,
       seenTime: '',
-      data:
-        'Dear Students, please note that there Will be no class on 19th Jan 2021',
-    },
-    {
-      date: '18 JAN 9.30 PM',
-      title:
-        'No Class on 19 Jan 2021No Class on 19 Jan 2021No Class on 19 Jan 2021No Class on 19 Jan 2021',
-      attachment: true,
-      seen: false,
-      seenTime: '',
-      data:
-        'Dear Students, please note that there Will be no class on 19th Jan 2021',
-    },
-    {
-      date: '18 JAN 9.30 PM',
-      title:
-        'No Class on 19 Jan 2021No Class on 19 Jan 2021No Class on 19 Jan 2021No Class on 19 Jan 2021',
-      attachment: true,
-      seen: false,
-      seenTime: '',
+      image: '',
+      pdf: 'https://reactnative.dev/',
       data:
         'Dear Students, please note that there Will be no class on 19th Jan 2021',
     },
@@ -169,10 +157,14 @@ const Notification = ({navigation}) => {
                 })
               }>
               <View style={styles.notificationCard}>
-                <Text style={styles.date}>{notification.date}</Text>
+                <View style={styles.dateContainer}>
+                  <Text style={styles.date}>{notification.month}</Text>
+                  <Text style={styles.date}>{notification.date}</Text>
+                  <Text style={styles.time}>{notification.time}</Text>
+                </View>
                 <View style={styles.titleContainer}>
                   <View style={styles.titleAttachmentSeen}>
-                    <Text numberOfLines={1} style={styles.title}>
+                    <Text numberOfLines={2} style={styles.title}>
                       {notification.title}
                     </Text>
 
@@ -193,7 +185,7 @@ const Notification = ({navigation}) => {
                       )}
                     </View>
                   </View>
-                  <Text numberOfLines={2} style={styles.data}>
+                  <Text numberOfLines={4} style={styles.data}>
                     {notification.data}
                   </Text>
                 </View>
@@ -305,16 +297,15 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   filterCount: {
-    backgroundColor: 'red',
     marginTop: -45,
     marginLeft: 20,
     borderRadius: 15,
   },
   countText: {
     color: 'white',
+    backgroundColor: 'red',
     textAlign: 'center',
     fontSize: 12,
-    backgroundColor: 'red',
     marginTop: -45,
     marginLeft: 20,
     borderRadius: 15,
@@ -323,20 +314,32 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     borderColor: Colors.darkGray,
     borderWidth: 1,
+    borderRadius: 5,
+    marginVertical: 5,
+    backgroundColor: Colors.blueGray,
+  },
+  dateContainer: {
+    borderColor: Colors.gray,
+    borderWidth: 1,
+    borderRadius: 5,
+    backgroundColor: Colors.lightBlue,
     marginVertical: 10,
-    backgroundColor: '#ebf2f7',
+    marginHorizontal: 15,
+    padding: 5,
+    height: 80,
+    alignSelf: 'center',
   },
   date: {
     textAlign: 'center',
     fontSize: 15,
-    width: 40,
-    borderColor: Colors.gray,
-    borderWidth: 1,
     color: Colors.gray,
-    backgroundColor: '#f2f6f9',
-    marginVertical: 10,
-    marginHorizontal: 15,
-    fontFamily: 'SofiaProRegular',
+    fontFamily: 'SofiaProMedium',
+  },
+  time: {
+    textAlign: 'center',
+    fontSize: 13,
+    color: Colors.gray,
+    fontFamily: 'SofiaProMedium',
   },
   titleContainer: {
     flex: 1,
@@ -351,12 +354,13 @@ const styles = StyleSheet.create({
   titleAttachmentSeen: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    paddingRight: 4,
   },
   data: {
     fontFamily: 'SofiaProRegular',
     color: Colors.darkGray,
     fontSize: 16,
-    width: '90%',
+    paddingRight: 25,
   },
 });
 

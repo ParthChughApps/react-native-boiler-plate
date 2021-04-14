@@ -1,35 +1,38 @@
 /* eslint-disable no-shadow */
 /* eslint-disable react-native/no-inline-styles */
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {
   View,
   Text,
   StyleSheet,
-  Image,
-  FlatList,
-  Dimensions,
-  TextInput,
-  TouchableOpacity,
   ImageBackground,
+  Dimensions,
+  Image,
 } from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
-import AntDesign from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {Colors} from 'react-native-ui-lib';
+import ImageZoom from 'react-native-image-pan-zoom';
+import {WebView} from 'react-native-webview';
 
 import Separator from '../../../components/Separator';
 
 const width = Dimensions.get('window').width;
+const height = Dimensions.get('window').height;
 
 const SingleNotification = ({route}) => {
   const notification = route.params.notification;
+
   return (
     <ImageBackground
       source={require('../../../assets/images/background.jpeg')}
       style={styles.container}>
       <View style={styles.marginHorizontal10}>
         <View style={styles.header}>
-          <Text style={styles.date}>{notification.date}</Text>
+          <View style={styles.dateContainer}>
+            <Text style={styles.date}>{notification.month}</Text>
+            <Text style={styles.date}>{notification.date}</Text>
+            <Text style={styles.time}>{notification.time}</Text>
+          </View>
           <View style={{justifyContent: 'space-evenly'}}>
             <Text style={styles.title}>{notification.title}</Text>
             <View style={{flexDirection: 'row'}}>
@@ -49,6 +52,30 @@ const SingleNotification = ({route}) => {
           <Text style={styles.data}>{notification.data}</Text>
         </View>
       </View>
+      {notification.image !== '' && (
+        <ImageZoom
+          cropWidth={width}
+          cropHeight={height}
+          imageWidth={400}
+          imageHeight={400}
+          style={{marginTop: -120}}>
+          <Image
+            style={styles.image}
+            source={require('../../../assets/images/logo.jpg')}
+          />
+        </ImageZoom>
+      )}
+      <View>
+        {notification.pdf !== '' && (
+          <View style={styles.pdf}>
+            <WebView
+              source={{
+                uri: 'https://example.com/abc.pdf',
+              }}
+            />
+          </View>
+        )}
+      </View>
     </ImageBackground>
   );
 };
@@ -66,16 +93,28 @@ const styles = StyleSheet.create({
     marginVertical: 30,
     justifyContent: 'space-evenly',
   },
+  dateContainer: {
+    borderColor: Colors.gray,
+    borderWidth: 1,
+    borderRadius: 5,
+    backgroundColor: Colors.lightBlue,
+    marginVertical: 10,
+    marginHorizontal: 15,
+    padding: 5,
+    height: 80,
+    alignSelf: 'center',
+  },
   date: {
     textAlign: 'center',
-    width: 40,
-    height: 80,
-    fontSize: 16,
-    borderColor: Colors.skyBlue,
-    borderWidth: 2,
+    fontSize: 15,
     color: Colors.gray,
-    backgroundColor: '#f2f6f9',
-    fontFamily: 'SofiaProRegular',
+    fontFamily: 'SofiaProMedium',
+  },
+  time: {
+    textAlign: 'center',
+    fontSize: 13,
+    color: Colors.gray,
+    fontFamily: 'SofiaProMedium',
   },
   title: {
     fontFamily: 'SofiaProRegular',
@@ -92,15 +131,30 @@ const styles = StyleSheet.create({
     marginHorizontal: 15,
   },
   data: {
-    marginVertical: 15,
+    marginVertical: 20,
     borderColor: Colors.gray,
     borderWidth: 1,
-    padding: 5,
+    padding: 10,
     borderRadius: 10,
     fontFamily: 'SofiaProRegular',
     color: Colors.darkGray,
     fontSize: 16,
-    backgroundColor: '#ebf2f7',
+    backgroundColor: Colors.blueGray,
+  },
+  image: {
+    alignSelf: 'center',
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: Colors.gray,
+  },
+  pdf: {
+    marginHorizontal: 10,
+    marginVertical: 10,
+    width: width - 20,
+    height: 250,
+    borderWidth: 1,
+    borderColor: Colors.gray,
+    borderRadius: 5,
   },
 });
 

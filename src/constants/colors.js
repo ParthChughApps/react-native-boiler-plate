@@ -9,4 +9,6 @@ Colors.loadColors({
   lightSkyBlue: '#bbcde5',
   white: '#ffffff',
   darkBlack: '#000000',
+  lightBlue: '#f2f6f9',
+  blueGray: '#ebf2f7',
 });
