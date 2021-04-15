@@ -12,11 +12,12 @@ import {
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {Colors} from 'react-native-ui-lib';
+import Collapsible from 'react-native-collapsible';
 
 import Separator from '../../../components/Separator';
 
 const Notification = ({navigation}) => {
-  const [isVisible, setVisible] = useState(false);
+  let [isVisible, setVisible] = useState(true);
   let [selectedFilters, setSelectedFilters] = useState([]);
 
   const filters = [
@@ -219,7 +220,9 @@ const Notification = ({navigation}) => {
           </View>
         </View>
 
-        {isVisible && <FiltersView />}
+        <Collapsible collapsed={isVisible} duration={1500}>
+          <FiltersView />
+        </Collapsible>
 
         <NotificationView />
       </View>
