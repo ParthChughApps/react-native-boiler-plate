@@ -150,7 +150,6 @@ const styles = StyleSheet.create({
   pdf: {
     marginHorizontal: 10,
     marginVertical: 10,
-    width: width - 20,
     height: 250,
     borderWidth: 1,
     borderColor: Colors.gray,
