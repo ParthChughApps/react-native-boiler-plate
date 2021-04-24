@@ -1,5 +1,7 @@
 PODS:
   - boost-for-react-native (1.63.0)
+  - BVLinearGradient (2.5.6):
+    - React
   - DoubleConversion (1.1.6)
   - FBLazyVector (0.64.0)
   - FBReactNativeSpec (0.64.0):
@@ -213,6 +215,8 @@ PODS:
     - React-Core
   - react-native-safe-area-context (3.2.0):
     - React-Core
+  - react-native-webview (11.4.0):
+    - React-Core
   - React-perflogger (0.64.0)
   - React-RCTActionSheet (0.64.0):
     - React-Core/RCTActionSheetHeaders (= 0.64.0)
@@ -279,6 +283,8 @@ PODS:
     - React-perflogger (= 0.64.0)
   - ReactNativeUiLib (3.0.4):
     - React
+  - RNCClipboard (1.5.1):
+    - React-Core
   - RNCMaskedView (0.1.10):
     - React
   - RNCPicker (1.14.0):
@@ -320,9 +326,12 @@ PODS:
     - React-Core
   - RNSVG (12.1.0):
     - React
+  - RNVectorIcons (8.1.0):
+    - React-Core
   - Yoga (1.14.0)
 
 DEPENDENCIES:
+  - BVLinearGradient (from `../node_modules/react-native-linear-gradient`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/React/FBReactNativeSpec`)
@@ -345,6 +354,7 @@ DEPENDENCIES:
   - "react-native-blur (from `../node_modules/@react-native-community/blur`)"
   - "react-native-netinfo (from `../node_modules/@react-native-community/netinfo`)"
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
+  - react-native-webview (from `../node_modules/react-native-webview`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
@@ -358,6 +368,7 @@ DEPENDENCIES:
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - ReactNativeUiLib (from `../node_modules/react-native-ui-lib/lib`)
+  - "RNCClipboard (from `../node_modules/@react-native-community/clipboard`)"
   - "RNCMaskedView (from `../node_modules/@react-native-community/masked-view`)"
   - "RNCPicker (from `../node_modules/@react-native-picker/picker`)"
   - "RNDateTimePicker (from `../node_modules/@react-native-community/datetimepicker`)"
@@ -365,6 +376,7 @@ DEPENDENCIES:
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
   - RNSVG (from `../node_modules/react-native-svg`)
+  - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -372,6 +384,8 @@ SPEC REPOS:
     - boost-for-react-native
 
 EXTERNAL SOURCES:
+  BVLinearGradient:
+    :path: "../node_modules/react-native-linear-gradient"
   DoubleConversion:
     :podspec: "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
   FBLazyVector:
@@ -412,6 +426,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-community/netinfo"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
+  react-native-webview:
+    :path: "../node_modules/react-native-webview"
   React-perflogger:
     :path: "../node_modules/react-native/ReactCommon/reactperflogger"
   React-RCTActionSheet:
@@ -438,6 +454,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   ReactNativeUiLib:
     :path: "../node_modules/react-native-ui-lib/lib"
+  RNCClipboard:
+    :path: "../node_modules/@react-native-community/clipboard"
   RNCMaskedView:
     :path: "../node_modules/@react-native-community/masked-view"
   RNCPicker:
@@ -452,11 +470,14 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-screens"
   RNSVG:
     :path: "../node_modules/react-native-svg"
+  RNVectorIcons:
+    :path: "../node_modules/react-native-vector-icons"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
+  BVLinearGradient: e3aad03778a456d77928f594a649e96995f1c872
   DoubleConversion: cf9b38bf0b2d048436d9a82ad2abe1404f11e7de
   FBLazyVector: 49cbe4b43e445b06bf29199b6ad2057649e4c8f5
   FBReactNativeSpec: f6a5ce84e7bb2120192249489c54687a0fd78116
@@ -477,6 +498,7 @@ SPEC CHECKSUMS:
   react-native-blur: cad4d93b364f91e7b7931b3fa935455487e5c33c
   react-native-netinfo: 30fb89fa913c342be82a887b56e96be6d71201dd
   react-native-safe-area-context: f0906bf8bc9835ac9a9d3f97e8bde2a997d8da79
+  react-native-webview: 4dfb534e9600b87fe667c5ca4fe09149383218b9
   React-perflogger: 9c547d8f06b9bf00cb447f2b75e8d7f19b7e02af
   React-RCTActionSheet: 3080b6e12e0e1a5b313c8c0050699b5c794a1b11
   React-RCTAnimation: 3f96f21a497ae7dabf4d2f150ee43f906aaf516f
@@ -490,6 +512,7 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: cad74a1eaa53ee6e7a3620231939d8fe2c6afcf0
   ReactCommon: cfe2b7fd20e0dbd2d1185cd7d8f99633fbc5ff05
   ReactNativeUiLib: cde7263a7d308b60161cd286f95c9433e79f2f7d
+  RNCClipboard: 41d8d918092ae8e676f18adada19104fa3e68495
   RNCMaskedView: 5a8ec07677aa885546a0d98da336457e2bea557f
   RNCPicker: 1a266981fc99330c252f5f98b3f09a377a35d88c
   RNDateTimePicker: 968ccf716b3b6aee07849641966005924de5c0f9
@@ -497,6 +520,7 @@ SPEC CHECKSUMS:
   RNReanimated: b8c8004b43446e3c2709fe64b2b41072f87428ad
   RNScreens: e8e8dd0588b5da0ab57dcca76ab9b2d8987757e0
   RNSVG: ce9d996113475209013317e48b05c21ee988d42e
+  RNVectorIcons: 31cebfcf94e8cf8686eb5303ae0357da64d7a5a4
   Yoga: 8c8436d4171c87504c648ae23b1d81242bdf3bbf
 
 PODFILE CHECKSUM: 852a208b748ff955bee12083c70cb6621fa815b9
